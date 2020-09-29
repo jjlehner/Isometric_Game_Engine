@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/jjl119/Programming/Game_Programming/isometric_world/src/engine/window/Window.hpp
+SDL2/SDL.h
+-
+atomic
+-
+thread
+-
+graphics/Interfaces.hpp
+/home/jjl119/Programming/Game_Programming/isometric_world/src/engine/window/graphics/Interfaces.hpp
+
+/home/jjl119/Programming/Game_Programming/isometric_world/src/main.cpp
+iostream
+-
+engine/window/Window.hpp
+/home/jjl119/Programming/Game_Programming/isometric_world/src/engine/window/Window.hpp
+

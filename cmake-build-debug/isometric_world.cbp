@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="isometric_world"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\src\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\SDL2\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="main">
+				<Option output="/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src/main" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/SDL2"/>
+					<Add directory="/home/jjl119/Programming/Game_Programming/isometric_world/src/engine"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 main"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="main/fast">
+				<Option output="/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src/main" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/SDL2"/>
+					<Add directory="/home/jjl119/Programming/Game_Programming/isometric_world/src/engine"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 main/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="engine">
+				<Option output="/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src/libengine.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/jjl119/Programming/Game_Programming/isometric_world/src/engine"/>
+					<Add directory="/usr/include/SDL2"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 engine"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="engine/fast">
+				<Option output="/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src/libengine.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/jjl119/Programming/Game_Programming/isometric_world/src/engine"/>
+					<Add directory="/usr/include/SDL2"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 engine/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/jjl119/Programming/Game_Programming/isometric_world/src/engine/graphics/Basic_Renderers.cpp">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/home/jjl119/Programming/Game_Programming/isometric_world/src/engine/graphics/Basic_Renderers.hpp">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/home/jjl119/Programming/Game_Programming/isometric_world/src/engine/graphics/Interfaces.cpp">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/home/jjl119/Programming/Game_Programming/isometric_world/src/engine/graphics/Interfaces.hpp">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/home/jjl119/Programming/Game_Programming/isometric_world/src/engine/graphics/Utility.h">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/home/jjl119/Programming/Game_Programming/isometric_world/src/engine/objects/Man/Man.cpp">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/home/jjl119/Programming/Game_Programming/isometric_world/src/engine/objects/Man/Man.hpp">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/home/jjl119/Programming/Game_Programming/isometric_world/src/engine/scene/Map.cpp">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/home/jjl119/Programming/Game_Programming/isometric_world/src/engine/scene/Map.hpp">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/home/jjl119/Programming/Game_Programming/isometric_world/src/engine/scene/base_objects/Game_Object_Interface.cpp">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/home/jjl119/Programming/Game_Programming/isometric_world/src/engine/scene/base_objects/Game_Object_Interface.hpp">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/home/jjl119/Programming/Game_Programming/isometric_world/src/engine/scene/base_objects/Grid.cpp">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/home/jjl119/Programming/Game_Programming/isometric_world/src/engine/scene/base_objects/Grid.hpp">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/home/jjl119/Programming/Game_Programming/isometric_world/src/engine/window/Window.cpp">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/home/jjl119/Programming/Game_Programming/isometric_world/src/engine/window/Window.hpp">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/home/jjl119/Programming/Game_Programming/isometric_world/src/main.cpp">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/home/jjl119/Programming/Game_Programming/isometric_world/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/jjl119/Programming/Game_Programming/isometric_world/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\"/>
+		</Unit>
+		<Unit filename="/home/jjl119/Programming/Game_Programming/isometric_world/../../../../../usr/lib/x86_64-linux-gnu/cmake/SDL2/sdl2-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\SDL2\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

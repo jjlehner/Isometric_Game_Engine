@@ -1,0 +1,17 @@
+add_library(engine STATIC
+        engine/graphics/Basic_Renderers.cpp
+        engine/scene/base_objects/Grid.cpp
+
+        engine/scene/Map.cpp
+        engine/window/Window.cpp
+        engine/scene/base_objects/Game_Object_Interface.cpp
+        engine/graphics/Interfaces.cpp
+        engine/objects/Man/Man.cpp engine/objects/Man/Man.hpp engine/graphics/Utility.h)
+target_include_directories(engine PUBLIC engine)
+add_executable(main main.cpp)
+
+find_package(SDL2 REQUIRED)
+include_directories(${SDL2_INCLUDE_DIRS})
+
+target_link_libraries(main PRIVATE engine)
+target_link_libraries(main PRIVATE ${SDL2_LIBRARIES})

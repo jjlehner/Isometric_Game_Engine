@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/jjl119/Programming/Game_Programming/isometric_world/src/engine/graphics/Basic_Renderers.cpp
+Basic_Renderers.hpp
+/home/jjl119/Programming/Game_Programming/isometric_world/src/engine/graphics/Basic_Renderers.hpp
+Interfaces.hpp
+/home/jjl119/Programming/Game_Programming/isometric_world/src/engine/graphics/Interfaces.hpp
+memory
+-
+
+/home/jjl119/Programming/Game_Programming/isometric_world/src/engine/graphics/Basic_Renderers.hpp
+Interfaces.hpp
+/home/jjl119/Programming/Game_Programming/isometric_world/src/engine/graphics/Interfaces.hpp
+
+/home/jjl119/Programming/Game_Programming/isometric_world/src/engine/graphics/Interfaces.hpp
+memory
+-
+
+/home/jjl119/Programming/Game_Programming/isometric_world/src/engine/graphics/grid.cpp
+vector
+-
+memory
+-
+Interfaces.hpp
+/home/jjl119/Programming/Game_Programming/isometric_world/src/engine/graphics/Interfaces.hpp
+Basic_Renderers.hpp
+/home/jjl119/Programming/Game_Programming/isometric_world/src/engine/graphics/Basic_Renderers.hpp
+

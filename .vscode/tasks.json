@@ -1,0 +1,33 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "C/C++: g++ build active file",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-g",
+                "src/main.cpp",
+                "src/engine/window/Window.cpp",
+                "src/engine/graphics/grid.cpp",
+                "src/engine/graphics/Interfaces.cpp",
+                "-o",
+                "${workspaceFolder}/bin/main",
+                "-lSDL2",
+                "-I/usr/include/SDL2/",
+                "-std=c++17",
+                "-pthread"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ],
+    "version": "2.0.0"
+}

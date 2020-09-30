@@ -5,8 +5,13 @@
 #include <stdio.h>
 #include <thread>
 
-Camera::Camera(SDL_Renderer * _renderer) : renderer(_renderer){}
-
+Camera::Camera( SDL_Renderer *_renderer ) : renderer( _renderer )
+{
+}
+Camera::~Camera()
+{
+	SDL_DestroyRenderer( renderer );
+}
 // Screen dimension constants
 const int SCREEN_WIDTH = 2000;
 const int SCREEN_HEIGHT = 1000;
@@ -31,11 +36,6 @@ void Window::universal_thread_handler()
 			}
 		}
 	}
-	// Destroy window
-	SDL_DestroyWindow( window );
-
-	// Quit SDL subsystems
-	SDL_Quit();
 }
 Window::Window()
 {
@@ -57,13 +57,20 @@ Window::Window()
 		{
 			handler = std::thread( &Window::universal_thread_handler, this );
 			handler.detach();
-			SDL_Renderer * renderer = SDL_CreateRenderer( window, -1, SDL_RENDERER_ACCELERATED );
-			camera = std::make_shared<Camera>(renderer);
+			SDL_Renderer *renderer = SDL_CreateRenderer( window, -1, SDL_RENDERER_ACCELERATED );
+			camera = std::make_shared<Camera>( renderer );
 		}
 	}
-
 }
+Window::~Window()
+{
+	// Destroy window
+	SDL_DestroyWindow( window );
 
-std::shared_ptr<Camera> Window::getCamera(){
+	// Quit SDL subsystems
+	SDL_Quit();
+}
+std::shared_ptr<Camera> Window::getCamera()
+{
 	return this->camera;
 }

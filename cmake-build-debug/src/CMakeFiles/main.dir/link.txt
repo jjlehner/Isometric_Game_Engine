@@ -1,1 +1,1 @@
-/usr/bin/c++  -std=c++14 -pthread -g   CMakeFiles/main.dir/main.cpp.o  -o main  libengine.a -lSDL2 
+/usr/bin/c++  -std=c++14 -pthread -g   CMakeFiles/main.dir/main.cpp.o  -o ../../bin/main  libengine.a -lSDL2 /usr/lib/x86_64-linux-gnu/libSDL2_image.so 

@@ -75,6 +75,7 @@ src/CMakeFiles/engine.dir/engine/graphics/Interfaces.cpp.o: /usr/include/SDL2/SD
 src/CMakeFiles/engine.dir/engine/graphics/Interfaces.cpp.o: /usr/include/SDL2/SDL_gesture.h
 src/CMakeFiles/engine.dir/engine/graphics/Interfaces.cpp.o: /usr/include/SDL2/SDL_haptic.h
 src/CMakeFiles/engine.dir/engine/graphics/Interfaces.cpp.o: /usr/include/SDL2/SDL_hints.h
+src/CMakeFiles/engine.dir/engine/graphics/Interfaces.cpp.o: /usr/include/SDL2/SDL_image.h
 src/CMakeFiles/engine.dir/engine/graphics/Interfaces.cpp.o: /usr/include/SDL2/SDL_joystick.h
 src/CMakeFiles/engine.dir/engine/graphics/Interfaces.cpp.o: /usr/include/SDL2/SDL_keyboard.h
 src/CMakeFiles/engine.dir/engine/graphics/Interfaces.cpp.o: /usr/include/SDL2/SDL_keycode.h
@@ -105,8 +106,10 @@ src/CMakeFiles/engine.dir/engine/graphics/Interfaces.cpp.o: /usr/include/SDL2/SD
 src/CMakeFiles/engine.dir/engine/graphics/Interfaces.cpp.o: /usr/include/SDL2/begin_code.h
 src/CMakeFiles/engine.dir/engine/graphics/Interfaces.cpp.o: /usr/include/SDL2/close_code.h
 
+src/CMakeFiles/engine.dir/engine/objects/Man/Man.cpp.o: ../src/engine/graphics/Basic_Renderers.hpp
 src/CMakeFiles/engine.dir/engine/objects/Man/Man.cpp.o: ../src/engine/graphics/Interfaces.hpp
 src/CMakeFiles/engine.dir/engine/objects/Man/Man.cpp.o: ../src/engine/scene/base_objects/Game_Object_Interface.hpp
+src/CMakeFiles/engine.dir/engine/objects/Man/Man.cpp.o: ../src/engine/scene/base_objects/Grid.hpp
 src/CMakeFiles/engine.dir/engine/objects/Man/Man.cpp.o: ../src/engine/window/Window.hpp
 src/CMakeFiles/engine.dir/engine/objects/Man/Man.cpp.o: ../src/engine/objects/Man/Man.cpp
 src/CMakeFiles/engine.dir/engine/objects/Man/Man.cpp.o: ../src/engine/objects/Man/Man.hpp
@@ -126,6 +129,7 @@ src/CMakeFiles/engine.dir/engine/objects/Man/Man.cpp.o: /usr/include/SDL2/SDL_ga
 src/CMakeFiles/engine.dir/engine/objects/Man/Man.cpp.o: /usr/include/SDL2/SDL_gesture.h
 src/CMakeFiles/engine.dir/engine/objects/Man/Man.cpp.o: /usr/include/SDL2/SDL_haptic.h
 src/CMakeFiles/engine.dir/engine/objects/Man/Man.cpp.o: /usr/include/SDL2/SDL_hints.h
+src/CMakeFiles/engine.dir/engine/objects/Man/Man.cpp.o: /usr/include/SDL2/SDL_image.h
 src/CMakeFiles/engine.dir/engine/objects/Man/Man.cpp.o: /usr/include/SDL2/SDL_joystick.h
 src/CMakeFiles/engine.dir/engine/objects/Man/Man.cpp.o: /usr/include/SDL2/SDL_keyboard.h
 src/CMakeFiles/engine.dir/engine/objects/Man/Man.cpp.o: /usr/include/SDL2/SDL_keycode.h

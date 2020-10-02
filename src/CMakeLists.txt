@@ -1,8 +1,6 @@
 add_library(engine STATIC
-        engine/graphics/Basic_Renderers.cpp
         engine/scene/base_objects/Grid.cpp
 
-        engine/scene/Map.cpp
         engine/window/Window.cpp
         engine/scene/base_objects/Game_Object_Interface.cpp
         engine/graphics/Interfaces.cpp

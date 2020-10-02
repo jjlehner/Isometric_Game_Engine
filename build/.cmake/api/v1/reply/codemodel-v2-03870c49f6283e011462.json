@@ -1,83 +1,71 @@
 {
-	"configurations" : 
-	[
-		{
-			"directories" : 
-			[
-				{
-					"build" : ".",
-					"childIndexes" : 
-					[
-						1
-					],
-					"minimumCMakeVersion" : 
-					{
-						"string" : "3.17"
-					},
-					"projectIndex" : 0,
-					"source" : "."
-				},
-				{
-					"build" : "src",
-					"minimumCMakeVersion" : 
-					{
-						"string" : "3.17"
-					},
-					"parentIndex" : 0,
-					"projectIndex" : 0,
-					"source" : "src",
-					"targetIndexes" : 
-					[
-						0,
-						1
-					]
-				}
-			],
-			"name" : "Debug",
-			"projects" : 
-			[
-				{
-					"directoryIndexes" : 
-					[
-						0,
-						1
-					],
-					"name" : "isometric_world",
-					"targetIndexes" : 
-					[
-						0,
-						1
-					]
-				}
-			],
-			"targets" : 
-			[
-				{
-					"directoryIndex" : 1,
-					"id" : "engine::@145eef247bfb46b6828c",
-					"jsonFile" : "target-engine-Debug-f4e3d553b2a876f7e5d9.json",
-					"name" : "engine",
-					"projectIndex" : 0
-				},
-				{
-					"directoryIndex" : 1,
-					"id" : "main::@145eef247bfb46b6828c",
-					"jsonFile" : "target-main-Debug-b296c19b07ae896b2ea6.json",
-					"name" : "main",
-					"projectIndex" : 0
-				}
-			]
-		}
-	],
-	"kind" : "codemodel",
-	"paths" : 
-	{
-		"build" : "/home/jjl119/Programming/Game_Programming/isometric_world/build",
-		"source" : "/home/jjl119/Programming/Game_Programming/isometric_world"
-	},
-	"version" : 
-	{
-		"major" : 2,
-		"minor" : 1
-	}
+  "configurations": [
+    {
+      "directories": [
+        {
+          "build": ".",
+          "childIndexes": [
+            1
+          ],
+          "minimumCMakeVersion": {
+            "string": "3.17"
+          },
+          "projectIndex": 0,
+          "source": "."
+        },
+        {
+          "build": "src",
+          "minimumCMakeVersion": {
+            "string": "3.17"
+          },
+          "parentIndex": 0,
+          "projectIndex": 0,
+          "source": "src",
+          "targetIndexes": [
+            0,
+            1
+          ]
+        }
+      ],
+      "name": "Debug",
+      "projects": [
+        {
+          "directoryIndexes": [
+            0,
+            1
+          ],
+          "name": "isometric_world",
+          "targetIndexes": [
+            0,
+            1
+          ]
+        }
+      ],
+      "targets": [
+        {
+          "directoryIndex": 1,
+          "id": "engine::@145eef247bfb46b6828c",
+          "jsonFile": "target-engine-Debug-f4e3d553b2a876f7e5d9.json",
+          "name": "engine",
+          "projectIndex": 0
+        },
+        {
+          "directoryIndex": 1,
+          "id": "main::@145eef247bfb46b6828c",
+          "jsonFile": "target-main-Debug-b296c19b07ae896b2ea6.json",
+          "name": "main",
+          "projectIndex": 0
+        }
+      ]
+    }
+  ],
+  "kind": "codemodel",
+  "paths": {
+    "build": "/home/jjl119/Programming/Game_Programming/isometric_world/build",
+    "source": "/home/jjl119/Programming/Game_Programming/isometric_world"
+  },
+  "version": {
+    "major": 2,
+    "minor": 1
+  }
 }

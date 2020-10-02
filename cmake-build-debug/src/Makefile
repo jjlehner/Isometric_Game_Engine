@@ -160,33 +160,6 @@ engine/fast:
 	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/build
 .PHONY : engine/fast
 
-engine/graphics/Basic_Renderers.o: engine/graphics/Basic_Renderers.cpp.o
-
-.PHONY : engine/graphics/Basic_Renderers.o
-
-# target to build an object file
-engine/graphics/Basic_Renderers.cpp.o:
-	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/engine/graphics/Basic_Renderers.cpp.o
-.PHONY : engine/graphics/Basic_Renderers.cpp.o
-
-engine/graphics/Basic_Renderers.i: engine/graphics/Basic_Renderers.cpp.i
-
-.PHONY : engine/graphics/Basic_Renderers.i
-
-# target to preprocess a source file
-engine/graphics/Basic_Renderers.cpp.i:
-	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/engine/graphics/Basic_Renderers.cpp.i
-.PHONY : engine/graphics/Basic_Renderers.cpp.i
-
-engine/graphics/Basic_Renderers.s: engine/graphics/Basic_Renderers.cpp.s
-
-.PHONY : engine/graphics/Basic_Renderers.s
-
-# target to generate assembly for a file
-engine/graphics/Basic_Renderers.cpp.s:
-	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/engine/graphics/Basic_Renderers.cpp.s
-.PHONY : engine/graphics/Basic_Renderers.cpp.s
-
 engine/graphics/Interfaces.o: engine/graphics/Interfaces.cpp.o
 
 .PHONY : engine/graphics/Interfaces.o
@@ -240,33 +213,6 @@ engine/objects/Man/Man.s: engine/objects/Man/Man.cpp.s
 engine/objects/Man/Man.cpp.s:
 	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/engine/objects/Man/Man.cpp.s
 .PHONY : engine/objects/Man/Man.cpp.s
-
-engine/scene/Map.o: engine/scene/Map.cpp.o
-
-.PHONY : engine/scene/Map.o
-
-# target to build an object file
-engine/scene/Map.cpp.o:
-	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/engine/scene/Map.cpp.o
-.PHONY : engine/scene/Map.cpp.o
-
-engine/scene/Map.i: engine/scene/Map.cpp.i
-
-.PHONY : engine/scene/Map.i
-
-# target to preprocess a source file
-engine/scene/Map.cpp.i:
-	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/engine/scene/Map.cpp.i
-.PHONY : engine/scene/Map.cpp.i
-
-engine/scene/Map.s: engine/scene/Map.cpp.s
-
-.PHONY : engine/scene/Map.s
-
-# target to generate assembly for a file
-engine/scene/Map.cpp.s:
-	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/engine/scene/Map.cpp.s
-.PHONY : engine/scene/Map.cpp.s
 
 engine/scene/base_objects/Game_Object_Interface.o: engine/scene/base_objects/Game_Object_Interface.cpp.o
 
@@ -386,18 +332,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... engine"
 	@echo "... main"
-	@echo "... engine/graphics/Basic_Renderers.o"
-	@echo "... engine/graphics/Basic_Renderers.i"
-	@echo "... engine/graphics/Basic_Renderers.s"
 	@echo "... engine/graphics/Interfaces.o"
 	@echo "... engine/graphics/Interfaces.i"
 	@echo "... engine/graphics/Interfaces.s"
 	@echo "... engine/objects/Man/Man.o"
 	@echo "... engine/objects/Man/Man.i"
 	@echo "... engine/objects/Man/Man.s"
-	@echo "... engine/scene/Map.o"
-	@echo "... engine/scene/Map.i"
-	@echo "... engine/scene/Map.s"
 	@echo "... engine/scene/base_objects/Game_Object_Interface.o"
 	@echo "... engine/scene/base_objects/Game_Object_Interface.i"
 	@echo "... engine/scene/base_objects/Game_Object_Interface.s"

@@ -77,22 +77,9 @@ include src/CMakeFiles/engine.dir/progress.make
 # Include the compile flags for this target's objects.
 include src/CMakeFiles/engine.dir/flags.make
 
-src/CMakeFiles/engine.dir/engine/graphics/Basic_Renderers.cpp.o: src/CMakeFiles/engine.dir/flags.make
-src/CMakeFiles/engine.dir/engine/graphics/Basic_Renderers.cpp.o: ../src/engine/graphics/Basic_Renderers.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/engine.dir/engine/graphics/Basic_Renderers.cpp.o"
-	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/engine/graphics/Basic_Renderers.cpp.o -c /home/jjl119/Programming/Game_Programming/isometric_world/src/engine/graphics/Basic_Renderers.cpp
-
-src/CMakeFiles/engine.dir/engine/graphics/Basic_Renderers.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/engine.dir/engine/graphics/Basic_Renderers.cpp.i"
-	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jjl119/Programming/Game_Programming/isometric_world/src/engine/graphics/Basic_Renderers.cpp > CMakeFiles/engine.dir/engine/graphics/Basic_Renderers.cpp.i
-
-src/CMakeFiles/engine.dir/engine/graphics/Basic_Renderers.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/engine.dir/engine/graphics/Basic_Renderers.cpp.s"
-	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jjl119/Programming/Game_Programming/isometric_world/src/engine/graphics/Basic_Renderers.cpp -o CMakeFiles/engine.dir/engine/graphics/Basic_Renderers.cpp.s
-
 src/CMakeFiles/engine.dir/engine/scene/base_objects/Grid.cpp.o: src/CMakeFiles/engine.dir/flags.make
 src/CMakeFiles/engine.dir/engine/scene/base_objects/Grid.cpp.o: ../src/engine/scene/base_objects/Grid.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/engine.dir/engine/scene/base_objects/Grid.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/engine.dir/engine/scene/base_objects/Grid.cpp.o"
 	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/engine/scene/base_objects/Grid.cpp.o -c /home/jjl119/Programming/Game_Programming/isometric_world/src/engine/scene/base_objects/Grid.cpp
 
 src/CMakeFiles/engine.dir/engine/scene/base_objects/Grid.cpp.i: cmake_force
@@ -103,22 +90,9 @@ src/CMakeFiles/engine.dir/engine/scene/base_objects/Grid.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/engine.dir/engine/scene/base_objects/Grid.cpp.s"
 	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jjl119/Programming/Game_Programming/isometric_world/src/engine/scene/base_objects/Grid.cpp -o CMakeFiles/engine.dir/engine/scene/base_objects/Grid.cpp.s
 
-src/CMakeFiles/engine.dir/engine/scene/Map.cpp.o: src/CMakeFiles/engine.dir/flags.make
-src/CMakeFiles/engine.dir/engine/scene/Map.cpp.o: ../src/engine/scene/Map.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/engine.dir/engine/scene/Map.cpp.o"
-	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/engine/scene/Map.cpp.o -c /home/jjl119/Programming/Game_Programming/isometric_world/src/engine/scene/Map.cpp
-
-src/CMakeFiles/engine.dir/engine/scene/Map.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/engine.dir/engine/scene/Map.cpp.i"
-	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jjl119/Programming/Game_Programming/isometric_world/src/engine/scene/Map.cpp > CMakeFiles/engine.dir/engine/scene/Map.cpp.i
-
-src/CMakeFiles/engine.dir/engine/scene/Map.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/engine.dir/engine/scene/Map.cpp.s"
-	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jjl119/Programming/Game_Programming/isometric_world/src/engine/scene/Map.cpp -o CMakeFiles/engine.dir/engine/scene/Map.cpp.s
-
 src/CMakeFiles/engine.dir/engine/window/Window.cpp.o: src/CMakeFiles/engine.dir/flags.make
 src/CMakeFiles/engine.dir/engine/window/Window.cpp.o: ../src/engine/window/Window.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/engine.dir/engine/window/Window.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/engine.dir/engine/window/Window.cpp.o"
 	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/engine/window/Window.cpp.o -c /home/jjl119/Programming/Game_Programming/isometric_world/src/engine/window/Window.cpp
 
 src/CMakeFiles/engine.dir/engine/window/Window.cpp.i: cmake_force
@@ -131,7 +105,7 @@ src/CMakeFiles/engine.dir/engine/window/Window.cpp.s: cmake_force
 
 src/CMakeFiles/engine.dir/engine/scene/base_objects/Game_Object_Interface.cpp.o: src/CMakeFiles/engine.dir/flags.make
 src/CMakeFiles/engine.dir/engine/scene/base_objects/Game_Object_Interface.cpp.o: ../src/engine/scene/base_objects/Game_Object_Interface.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/engine.dir/engine/scene/base_objects/Game_Object_Interface.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/engine.dir/engine/scene/base_objects/Game_Object_Interface.cpp.o"
 	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/engine/scene/base_objects/Game_Object_Interface.cpp.o -c /home/jjl119/Programming/Game_Programming/isometric_world/src/engine/scene/base_objects/Game_Object_Interface.cpp
 
 src/CMakeFiles/engine.dir/engine/scene/base_objects/Game_Object_Interface.cpp.i: cmake_force
@@ -144,7 +118,7 @@ src/CMakeFiles/engine.dir/engine/scene/base_objects/Game_Object_Interface.cpp.s:
 
 src/CMakeFiles/engine.dir/engine/graphics/Interfaces.cpp.o: src/CMakeFiles/engine.dir/flags.make
 src/CMakeFiles/engine.dir/engine/graphics/Interfaces.cpp.o: ../src/engine/graphics/Interfaces.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/CMakeFiles/engine.dir/engine/graphics/Interfaces.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/engine.dir/engine/graphics/Interfaces.cpp.o"
 	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/engine/graphics/Interfaces.cpp.o -c /home/jjl119/Programming/Game_Programming/isometric_world/src/engine/graphics/Interfaces.cpp
 
 src/CMakeFiles/engine.dir/engine/graphics/Interfaces.cpp.i: cmake_force
@@ -157,7 +131,7 @@ src/CMakeFiles/engine.dir/engine/graphics/Interfaces.cpp.s: cmake_force
 
 src/CMakeFiles/engine.dir/engine/objects/Man/Man.cpp.o: src/CMakeFiles/engine.dir/flags.make
 src/CMakeFiles/engine.dir/engine/objects/Man/Man.cpp.o: ../src/engine/objects/Man/Man.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/CMakeFiles/engine.dir/engine/objects/Man/Man.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/engine.dir/engine/objects/Man/Man.cpp.o"
 	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/engine/objects/Man/Man.cpp.o -c /home/jjl119/Programming/Game_Programming/isometric_world/src/engine/objects/Man/Man.cpp
 
 src/CMakeFiles/engine.dir/engine/objects/Man/Man.cpp.i: cmake_force
@@ -170,9 +144,7 @@ src/CMakeFiles/engine.dir/engine/objects/Man/Man.cpp.s: cmake_force
 
 # Object files for target engine
 engine_OBJECTS = \
-"CMakeFiles/engine.dir/engine/graphics/Basic_Renderers.cpp.o" \
 "CMakeFiles/engine.dir/engine/scene/base_objects/Grid.cpp.o" \
-"CMakeFiles/engine.dir/engine/scene/Map.cpp.o" \
 "CMakeFiles/engine.dir/engine/window/Window.cpp.o" \
 "CMakeFiles/engine.dir/engine/scene/base_objects/Game_Object_Interface.cpp.o" \
 "CMakeFiles/engine.dir/engine/graphics/Interfaces.cpp.o" \
@@ -181,16 +153,14 @@ engine_OBJECTS = \
 # External object files for target engine
 engine_EXTERNAL_OBJECTS =
 
-src/libengine.a: src/CMakeFiles/engine.dir/engine/graphics/Basic_Renderers.cpp.o
 src/libengine.a: src/CMakeFiles/engine.dir/engine/scene/base_objects/Grid.cpp.o
-src/libengine.a: src/CMakeFiles/engine.dir/engine/scene/Map.cpp.o
 src/libengine.a: src/CMakeFiles/engine.dir/engine/window/Window.cpp.o
 src/libengine.a: src/CMakeFiles/engine.dir/engine/scene/base_objects/Game_Object_Interface.cpp.o
 src/libengine.a: src/CMakeFiles/engine.dir/engine/graphics/Interfaces.cpp.o
 src/libengine.a: src/CMakeFiles/engine.dir/engine/objects/Man/Man.cpp.o
 src/libengine.a: src/CMakeFiles/engine.dir/build.make
 src/libengine.a: src/CMakeFiles/engine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library libengine.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library libengine.a"
 	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src && $(CMAKE_COMMAND) -P CMakeFiles/engine.dir/cmake_clean_target.cmake
 	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/engine.dir/link.txt --verbose=$(VERBOSE)
 

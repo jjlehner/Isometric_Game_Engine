@@ -66,7 +66,6 @@ Window::~Window()
 {
 	// Destroy window
 	SDL_DestroyWindow( window );
-
 	// Quit SDL subsystems
 	SDL_Quit();
 }

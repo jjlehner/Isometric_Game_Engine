@@ -6,12 +6,6 @@
 
 #IncludeRegexTransform: 
 
-../src/engine/graphics/Basic_Renderers.hpp
-Interfaces.hpp
-../src/engine/graphics/Interfaces.hpp
-scene/base_objects/Grid.hpp
-../src/engine/graphics/scene/base_objects/Grid.hpp
-
 ../src/engine/graphics/Interfaces.hpp
 scene/base_objects/Game_Object_Interface.hpp
 ../src/engine/graphics/scene/base_objects/Game_Object_Interface.hpp
@@ -25,8 +19,6 @@ memory
 ../src/engine/scene/base_objects/Game_Object_Interface.hpp
 
 ../src/engine/scene/base_objects/Grid.hpp
-graphics/Basic_Renderers.hpp
-../src/engine/scene/base_objects/graphics/Basic_Renderers.hpp
 graphics/Interfaces.hpp
 ../src/engine/scene/base_objects/graphics/Interfaces.hpp
 memory
@@ -49,9 +41,9 @@ window/Window.hpp
 /home/jjl119/Programming/Game_Programming/isometric_world/src/window/Window.hpp
 iostream
 -
-chrono
+random
 -
-thread
+algorithm
 -
 
 /usr/include/SDL2/SDL.h

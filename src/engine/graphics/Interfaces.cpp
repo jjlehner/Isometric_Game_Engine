@@ -2,15 +2,12 @@
 #include <SDL_image.h>
 #include <memory>
 
-Renderer_Interface::Renderer_Interface( std::shared_ptr<Sprite_Interface> _sprite ) : sprite( _sprite )
-{
-}
 
 Renderer_Interface::~Renderer_Interface()
 {
 	if ( texture != NULL )
 	{
-		//SDL_DestroyTexture( texture );
+		SDL_DestroyTexture( texture );
 	}
 }
 void Renderer_Interface::setCamera( std::shared_ptr<Camera> _camera )
@@ -48,7 +45,15 @@ SDL_Texture *Renderer_Interface::load_texture( std::string path )
 
 	return newTexture;
 }
-
-Sprite_Interface::Sprite_Interface( std::unique_ptr<Renderer_Interface> ptr ) : renderer( std::move( ptr ) )
+Sprite_Interface::~Sprite_Interface()
 {
+	if( this->renderer != nullptr ){
+		delete renderer;
+	}
+}
+void Sprite_Interface::render() const
+{
+	if(this->renderer != nullptr){
+		this->renderer->render();
+	}
 }

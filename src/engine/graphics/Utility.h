@@ -4,7 +4,8 @@
 
 #ifndef GUARD_ISOMETRIC_WORLD_UTILITY_H
 #define GUARD_ISOMETRIC_WORLD_UTILITY_H
-struct Utility_Func{
+struct Utility_Func
+{
 public:
 	load_image
 };

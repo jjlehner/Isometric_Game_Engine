@@ -9,10 +9,13 @@ class Man;
 class Man_Renderer : public Renderer_Interface
 {
 private:
+	//NOTE - Should probably make textures their own separate class
 	const std::string TEXTURE_PATH = "../res/generic_man.png";
-
+	int position = 0;
+	const int NUM_OF_POSITIONS = 64;
+	const Man * const MAN;
 public:
-	Man_Renderer( std::shared_ptr<Man> );
+	Man_Renderer( const Man *const man );
 	virtual void render() const override;
 };
 

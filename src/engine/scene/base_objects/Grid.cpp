@@ -15,11 +15,6 @@ Grid_Renderer::Grid_Renderer( const Grid* const grid ) : GRID(grid)
 
 void Grid_Renderer::render() const
 {
-	if ( this->camera->renderer == nullptr )
-	{
-		return;
-	}
-
 	using y_size_type = Grid::Map_Type::size_type;
 	using x_size_type = Grid::Map_Vector_Type::size_type;
 	const y_size_type y_length = GRID->HEIGHT;

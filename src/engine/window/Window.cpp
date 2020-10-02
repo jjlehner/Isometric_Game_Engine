@@ -29,9 +29,12 @@ void Window::universal_thread_handler()
 		while ( SDL_PollEvent( &e ) != 0 )
 		{
 			// User requests quit
-			if ( e.type == SDL_QUIT )
+			switch ( e.type )
 			{
+			case SDL_QUIT:
 				closed.store( true );
+				break;
+			case SDL_KEYDOWN:
 				break;
 			}
 		}

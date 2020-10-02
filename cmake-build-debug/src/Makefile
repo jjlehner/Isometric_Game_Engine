@@ -187,6 +187,33 @@ engine/graphics/Interfaces.cpp.s:
 	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/engine/graphics/Interfaces.cpp.s
 .PHONY : engine/graphics/Interfaces.cpp.s
 
+engine/graphics/Textures.o: engine/graphics/Textures.cpp.o
+
+.PHONY : engine/graphics/Textures.o
+
+# target to build an object file
+engine/graphics/Textures.cpp.o:
+	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/engine/graphics/Textures.cpp.o
+.PHONY : engine/graphics/Textures.cpp.o
+
+engine/graphics/Textures.i: engine/graphics/Textures.cpp.i
+
+.PHONY : engine/graphics/Textures.i
+
+# target to preprocess a source file
+engine/graphics/Textures.cpp.i:
+	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/engine/graphics/Textures.cpp.i
+.PHONY : engine/graphics/Textures.cpp.i
+
+engine/graphics/Textures.s: engine/graphics/Textures.cpp.s
+
+.PHONY : engine/graphics/Textures.s
+
+# target to generate assembly for a file
+engine/graphics/Textures.cpp.s:
+	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/engine/graphics/Textures.cpp.s
+.PHONY : engine/graphics/Textures.cpp.s
+
 engine/objects/Man/Man.o: engine/objects/Man/Man.cpp.o
 
 .PHONY : engine/objects/Man/Man.o
@@ -335,6 +362,9 @@ help:
 	@echo "... engine/graphics/Interfaces.o"
 	@echo "... engine/graphics/Interfaces.i"
 	@echo "... engine/graphics/Interfaces.s"
+	@echo "... engine/graphics/Textures.o"
+	@echo "... engine/graphics/Textures.i"
+	@echo "... engine/graphics/Textures.s"
 	@echo "... engine/objects/Man/Man.o"
 	@echo "... engine/objects/Man/Man.i"
 	@echo "... engine/objects/Man/Man.s"

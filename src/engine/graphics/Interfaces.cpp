@@ -15,35 +15,12 @@ void Renderer_Interface::setCamera( std::shared_ptr<Camera> _camera )
 	this->camera = _camera;
 }
 
-SDL_Texture *Renderer_Interface::load_texture( std::string path )
-{
-	if ( camera->renderer == nullptr )
-	{
-		return nullptr;
-	}
-	// The final texture
-	SDL_Texture *newTexture = NULL;
 
-	// Load image at specified path
-	SDL_Surface *loadedSurface = IMG_Load( path.c_str() );
-	if ( loadedSurface == NULL )
-	{
-		printf( "Unable to load image %s! SDL_image Error: %s\n", path.c_str(), IMG_GetError() );
+bool Renderer_Interface::isCameraSet(){
+	if(this->camera!= nullptr){
+		return true;
 	}
-	else
-	{
-		// Create texture from surface pixels
-		newTexture = SDL_CreateTextureFromSurface( camera->renderer, loadedSurface );
-		if ( newTexture == NULL )
-		{
-			printf( "Unable to create texture from %s! SDL Error: %s\n", path.c_str(), SDL_GetError() );
-		}
-
-		// Get rid of old loaded surface
-		SDL_FreeSurface( loadedSurface );
-	}
-
-	return newTexture;
+	return false;
 }
 Sprite_Interface::~Sprite_Interface()
 {
@@ -54,6 +31,8 @@ Sprite_Interface::~Sprite_Interface()
 void Sprite_Interface::render() const
 {
 	if(this->renderer != nullptr){
-		this->renderer->render();
+		if(this->renderer->isCameraSet()){
+			this->renderer->render();
+		}
 	}
 }

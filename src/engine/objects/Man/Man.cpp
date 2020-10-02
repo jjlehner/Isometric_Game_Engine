@@ -4,6 +4,16 @@
 
 #include "Man.hpp"
 #include <memory>
+
+Man_Renderer::Man_Renderer( const Man *const man ) : MAN( man )
+{
+	texture = load_texture( TEXTURE_PATH );
+
+}
+void Man_Renderer::render() const
+{
+
+}
 Man::Man()
 {
 }

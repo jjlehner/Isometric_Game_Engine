@@ -10,10 +10,8 @@ class Sprite_Interface;
 
 class Renderer_Interface
 {
-private:
-	SDL_Texture *texture = nullptr;
-
 protected:
+	SDL_Texture *texture = nullptr;
 	std::shared_ptr<Camera> camera = nullptr;
 	SDL_Texture *load_texture( std::string path );
 
@@ -22,6 +20,7 @@ public:
 	Renderer_Interface() = default;
 	void setCamera( std::shared_ptr<Camera> );
 	virtual ~Renderer_Interface();
+	bool isCameraSet();
 };
 
 class Sprite_Interface : public Game_Object_Interface

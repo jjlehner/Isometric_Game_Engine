@@ -3,12 +3,15 @@
 #include <SDL.h>
 #include <memory>
 
-Grid::Grid( int width, int height ) : WIDTH(width), HEIGHT(height)
+Grid::Grid( std::shared_ptr<const Camera> camera, int width, int height ) : WIDTH(width), HEIGHT(height)
 {
-	renderer = new Grid_Renderer(this);
+	renderer = new Grid_Renderer(camera, this);
 }
-
-Grid_Renderer::Grid_Renderer( const Grid* const grid ) : GRID(grid)
+const Grid *const Grid_Renderer::getSprite() const
+{
+	return GRID;
+}
+Grid_Renderer::Grid_Renderer(std::shared_ptr<const Camera> camera, const Grid* const grid ) : Renderer_Interface(camera), GRID(grid)
 {
 
 }

@@ -1,20 +1,18 @@
 #include "scene/base_objects/Grid.hpp"
 #include "window/Window.hpp"
-#include <iostream>
-#include <random>
 #include <algorithm>
+#include <iostream>
+#include <objects/Man/Man.hpp>
+#include <random>
 using namespace std::chrono_literals;
 
 int main()
 {
 
 	Window w;
-	Grid grid( 100, 100 );
-	std::random_device rd;  //Will be used to obtain a seed for the random number engine
-	std::mt19937 gen(rd()); //Standard mersenne_twister_engine seeded with rd()
-	std::uniform_int_distribution<int> uniform_dist_symm(-1,1);
-	std::uniform_int_distribution<int> uniform_dist_asymm(0,1);
-
+	Grid grid( w.getCamera(),100, 100 );
+	Man man(w.getCamera());
+	man.renderer->setCamera(w.getCamera());
 	grid.renderer->setCamera( w.getCamera() );
 
 	//grid.attribute->height_map[4][4] = 1;
@@ -26,6 +24,7 @@ int main()
 
 		SDL_RenderClear( w.getCamera()->renderer );
 		grid.render();
+		man.render();
 		SDL_RenderPresent( w.getCamera()->renderer );
 	}
 	std::cout << "done" << std::endl;

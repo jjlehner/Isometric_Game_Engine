@@ -2,15 +2,12 @@
 #include <SDL_image.h>
 #include <memory>
 
-
-Renderer_Interface::~Renderer_Interface()
+Renderer_Interface::Renderer_Interface( std::shared_ptr<const Camera> _camera ): camera(_camera)
 {
-	if ( texture != NULL )
-	{
-		SDL_DestroyTexture( texture );
-	}
+
 }
-void Renderer_Interface::setCamera( std::shared_ptr<Camera> _camera )
+
+void Renderer_Interface::setCamera( std::shared_ptr<const Camera> _camera )
 {
 	this->camera = _camera;
 }

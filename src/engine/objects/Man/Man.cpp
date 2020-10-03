@@ -5,18 +5,22 @@
 #include "Man.hpp"
 #include <memory>
 
-Man_Renderer::Man_Renderer( const Man *const man ) : MAN( man )
+Man_Renderer::Man_Renderer( std::shared_ptr<const Camera> camera, const Man *const man ) : Renderer_Interface(camera), MAN( man ), texture(this, "../res/generic_man.png", 138, 138)
 {
-	texture = load_texture( TEXTURE_PATH );
 
 }
+
 void Man_Renderer::render() const
 {
+	texture.render();
+}
 
-}
-Man::Man()
+const Man *const Man_Renderer::getSprite() const
 {
+	return MAN;
 }
-void Man::render() const
+
+Man::Man(std::shared_ptr<const Camera> camera)
 {
+	renderer = new Man_Renderer(camera, this);
 }

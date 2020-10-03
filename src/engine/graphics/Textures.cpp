@@ -3,54 +3,82 @@
 //
 
 #include "Textures.hpp"
-#include <string>
 #include <SDL_image.h>
-Texture::Texture(  const std::shared_ptr<const Camera> camera, const std::string path ) : CAMERA(camera), PATH(path)
+#include <string>
+Texture::Texture( const Renderer_Interface *const renderer, const std::string path )
+	: RENDERER( renderer ), PATH( path )
 {
-}
-AnimatedTexture::AnimatedTexture( const std::shared_ptr<const Camera> camera, const std::string path, int width, int height) : Texture(camera, path), WIDTH_OF_TILE(width), HEIGHT_OF_TILE(height){
-
-}
-SDL_Texture *Texture::load_texture( std::string path )
-{
-	if ( CAMERA->renderer == nullptr )
+	if ( load_texture() )
 	{
-		return nullptr;
+		SDL_QueryTexture( texture, NULL, NULL, &width, &height );
+		dest_rect.w = width;
+		dest_rect.x = height;
 	}
-	// The final texture
-	SDL_Texture *newTexture = NULL;
 
+	src_rect.w = width;
+	src_rect.h = height;
+}
+Animated_Texture::Animated_Texture( const Renderer_Interface *const renderer, const std::string path, int width,
+								  int height )
+	: Texture( renderer, path ), WIDTH_OF_TILE( width ), HEIGHT_OF_TILE( height )
+{
+	src_rect.w = WIDTH_OF_TILE;
+	src_rect.h = HEIGHT_OF_TILE;
+	dest_rect.w = WIDTH_OF_TILE;
+	dest_rect.h = HEIGHT_OF_TILE;
+}
+bool Texture::load_texture()
+{
+	texture = nullptr;
+	if ( RENDERER->camera->renderer == nullptr )
+	{
+		return false;
+	}
 	// Load image at specified path
-	SDL_Surface *loadedSurface = IMG_Load( path.c_str() );
+	SDL_Surface *loadedSurface = IMG_Load( PATH.c_str() );
 	if ( loadedSurface == NULL )
 	{
-		printf( "Unable to load image %s! SDL_image Error: %s\n", path.c_str(), IMG_GetError() );
+		printf( "Unable to load image %s! SDL_image Error: %s\n", PATH.c_str(), IMG_GetError() );
 	}
 	else
 	{
 		// Create texture from surface pixels
-		newTexture = SDL_CreateTextureFromSurface( CAMERA->renderer, loadedSurface );
-		if ( newTexture == NULL )
+		texture = SDL_CreateTextureFromSurface( RENDERER->camera->renderer, loadedSurface );
+		if ( texture == NULL )
 		{
-			printf( "Unable to create texture from %s! SDL Error: %s\n", path.c_str(), SDL_GetError() );
+			printf( "Unable to create texture from %s! SDL Error: %s\n", PATH.c_str(), SDL_GetError() );
+			return false;
 		}
 
 		// Get rid of old loaded surface
 		SDL_FreeSurface( loadedSurface );
 	}
-
-	return newTexture;
+	return true;
 }
-void AnimatedTexture::render() const{
-
+Texture::~Texture()
+{
+	if(texture != nullptr){
+		SDL_DestroyTexture(texture);
+	}
 }
-bool AnimatedTexture::setPosition(unsigned int position){
-	if(NUM_OF_TILES > position){
+void Animated_Texture::render() const
+{
+	dest_rect.x = RENDERER->getSprite()->x;
+	dest_rect.y = RENDERER->getSprite()->y;
+	SDL_RenderCopy( RENDERER->camera->renderer, texture, &src_rect, &dest_rect );
+}
+bool Animated_Texture::setPosition( unsigned int position )
+{
+	if ( NUM_OF_TILES > position )
+	{
 		this->position = position;
+		src_rect.x = WIDTH_OF_TILE * (int)( position % ( width / WIDTH_OF_TILE ) );
+		src_rect.y = HEIGHT_OF_TILE * (int)( position / ( width / WIDTH_OF_TILE ) );
 		return true;
 	}
 	return false;
 }
-unsigned int AnimatedTexture::getPosition(){
+unsigned int Animated_Texture::getPosition()
+{
 	return this->position;
 }

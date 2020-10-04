@@ -26,6 +26,7 @@ Animated_Texture::Animated_Texture( const Renderer_Interface *const renderer, co
 	src_rect.h = HEIGHT_OF_TILE;
 	dest_rect.w = WIDTH_OF_TILE;
 	dest_rect.h = HEIGHT_OF_TILE;
+	NUM_OF_TILES = this->width/WIDTH_OF_TILE;
 }
 bool Texture::load_texture()
 {

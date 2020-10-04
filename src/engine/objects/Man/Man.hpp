@@ -11,17 +11,18 @@ class Man : public Sprite_Interface
 {
 public:
 	Man( std::shared_ptr<const Camera> );
+	virtual bool keyboardEventHandler( const SDL_Event *const ) override;
 };
 
 class Man_Renderer : public Renderer_Interface
 {
 private:
-	Animated_Texture texture;
-	int position = 0;
 	const int NUM_OF_POSITIONS = 64;
 	const Man *const MAN;
 
 public:
+	Animated_Texture texture;
+
 	Man_Renderer( std::shared_ptr<const Camera>, const Man *const man );
 	const Man *const getSprite() const override;
 	void render() const;

@@ -146,9 +146,6 @@
 		<Unit filename="/home/jjl119/Programming/Game_Programming/isometric_world/src/engine/graphics/Textures.hpp">
 			<Option target="engine"/>
 		</Unit>
-		<Unit filename="/home/jjl119/Programming/Game_Programming/isometric_world/src/engine/graphics/Utility.h">
-			<Option target="engine"/>
-		</Unit>
 		<Unit filename="/home/jjl119/Programming/Game_Programming/isometric_world/src/engine/objects/Man/Man.cpp">
 			<Option target="engine"/>
 		</Unit>
@@ -171,6 +168,9 @@
 			<Option target="engine"/>
 		</Unit>
 		<Unit filename="/home/jjl119/Programming/Game_Programming/isometric_world/src/engine/window/Window.hpp">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/home/jjl119/Programming/Game_Programming/isometric_world/src/engine/window/Window_Controller.hpp">
 			<Option target="engine"/>
 		</Unit>
 		<Unit filename="/home/jjl119/Programming/Game_Programming/isometric_world/src/main.cpp">

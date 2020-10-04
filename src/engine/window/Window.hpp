@@ -1,8 +1,10 @@
 #ifndef GUARD_WINDOW_HPP
 #define GUARD_WINDOW_HPP
+
 #include <SDL2/SDL.h>
 #include <atomic>
 #include <thread>
+#include "graphics/Interfaces.hpp"
 class Camera
 {
 private:
@@ -16,6 +18,7 @@ public:
 
 	~Camera();
 };
+class Sprite_Interface;
 class Window
 {
 private:
@@ -28,6 +31,8 @@ private:
 
 	void universal_thread_handler();
 
+	class Controller;
+	const std::unique_ptr<Controller> controller;
 public:
 	std::atomic<bool> closed{ false };
 	Window();
@@ -36,5 +41,6 @@ public:
 	void modifyScreen();
 
 	std::shared_ptr<Camera> getCamera();
+	void setPlayer(Sprite_Interface * spr);
 };
 #endif

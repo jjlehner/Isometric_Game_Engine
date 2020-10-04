@@ -27,12 +27,13 @@ public:
 class Sprite_Interface : public Game_Object_Interface
 {
 public:
-	int x = 10;
-	int y = 10;
+	int x = 300;
+	int y = 500;
 	int z = 10;
 	Renderer_Interface* renderer = nullptr;
 	void render() const;
 	virtual ~Sprite_Interface();
+	virtual bool keyboardEventHandler(const SDL_Event*const);
 };
 
 

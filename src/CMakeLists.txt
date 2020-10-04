@@ -4,7 +4,8 @@ add_library(engine STATIC
         engine/window/Window.cpp
         engine/scene/base_objects/Game_Object_Interface.cpp
         engine/graphics/Interfaces.cpp
-        engine/objects/Man/Man.cpp engine/objects/Man/Man.hpp engine/graphics/Utility.h engine/graphics/Textures.cpp engine/graphics/Textures.hpp)
+        engine/objects/Man/Man.cpp
+        engine/graphics/Textures.cpp engine/window/Window_Controller.hpp)
 target_include_directories(engine PUBLIC engine)
 add_executable(main main.cpp)
 

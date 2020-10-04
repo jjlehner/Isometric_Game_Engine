@@ -16,6 +16,22 @@ SDL.h
 memory
 -
 
+../src/engine/graphics/Textures.hpp
+Interfaces.hpp
+../src/engine/graphics/Interfaces.hpp
+string
+-
+window/Window.hpp
+-
+
+../src/engine/objects/Man/Man.hpp
+graphics/Textures.hpp
+../src/engine/objects/Man/graphics/Textures.hpp
+SDL_image.h
+-
+graphics/Interfaces.hpp
+-
+
 ../src/engine/scene/base_objects/Game_Object_Interface.hpp
 
 ../src/engine/scene/base_objects/Grid.hpp
@@ -33,17 +49,21 @@ atomic
 -
 thread
 -
+graphics/Interfaces.hpp
+../src/engine/window/graphics/Interfaces.hpp
 
 /home/jjl119/Programming/Game_Programming/isometric_world/src/main.cpp
 scene/base_objects/Grid.hpp
 /home/jjl119/Programming/Game_Programming/isometric_world/src/scene/base_objects/Grid.hpp
 window/Window.hpp
 /home/jjl119/Programming/Game_Programming/isometric_world/src/window/Window.hpp
+algorithm
+-
 iostream
 -
-random
+objects/Man/Man.hpp
 -
-algorithm
+random
 -
 
 /usr/include/SDL2/SDL.h
@@ -301,6 +321,16 @@ close_code.h
 /usr/include/SDL2/SDL_hints.h
 SDL_stdinc.h
 /usr/include/SDL2/SDL_stdinc.h
+begin_code.h
+/usr/include/SDL2/begin_code.h
+close_code.h
+/usr/include/SDL2/close_code.h
+
+/usr/include/SDL2/SDL_image.h
+SDL.h
+/usr/include/SDL2/SDL.h
+SDL_version.h
+/usr/include/SDL2/SDL_version.h
 begin_code.h
 /usr/include/SDL2/begin_code.h
 close_code.h

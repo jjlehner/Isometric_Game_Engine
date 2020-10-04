@@ -1,8 +1,7 @@
 // Using SDL and standard IO
-#include "Window.hpp"
+#include "Window_Controller.hpp"
 #include <SDL2/SDL.h>
 #include <memory>
-#include <stdio.h>
 #include <thread>
 
 Camera::Camera( SDL_Renderer *_renderer ) : renderer( _renderer )
@@ -26,7 +25,7 @@ void Window::universal_thread_handler()
 	while ( !closed.load() )
 	{
 		// Handle events on queue
-		while ( SDL_PollEvent( &e ) != 0 )
+		while ( SDL_WaitEvent( &e ) && closed.load() == false )
 		{
 			// User requests quit
 			switch ( e.type )
@@ -34,13 +33,28 @@ void Window::universal_thread_handler()
 			case SDL_QUIT:
 				closed.store( true );
 				break;
+				/*
+			case SDL_MOUSEBUTTONDOWN:
+				controller->mouseEventHandler(&e);
+				break;
+			case SDL_MOUSEBUTTONUP:
+				controller->mouseEventHandler(&e);
+				break;
+			case SDL_MOUSEMOTION:
+				controller->mouseEventHandler(&e);
+				break;
+				 */
 			case SDL_KEYDOWN:
+				controller->keyboardEventHandler(&e);
+				break;
+			case SDL_KEYUP:
+				controller->keyboardEventHandler(&e);
 				break;
 			}
 		}
 	}
 }
-Window::Window()
+Window::Window() : controller(std::make_unique<Controller>())
 {
 	// Initialize SDL
 	if ( SDL_Init( SDL_INIT_VIDEO ) < 0 )
@@ -75,4 +89,17 @@ Window::~Window()
 std::shared_ptr<Camera> Window::getCamera()
 {
 	return this->camera;
+}
+
+bool Window::Controller::keyboardEventHandler( const SDL_Event *const event)
+{
+	if ( player != nullptr )
+	{
+		player->keyboardEventHandler(event);
+	}
+	return true;
+}
+
+void Window::setPlayer(Sprite_Interface * spr){
+	this->controller->player = spr;
 }

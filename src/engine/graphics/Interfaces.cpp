@@ -1,10 +1,8 @@
 #include "Interfaces.hpp"
-#include <SDL_image.h>
 #include <memory>
 
 Renderer_Interface::Renderer_Interface( std::shared_ptr<const Camera> _camera ): camera(_camera)
 {
-
 }
 
 void Renderer_Interface::setCamera( std::shared_ptr<const Camera> _camera )
@@ -32,4 +30,8 @@ void Sprite_Interface::render() const
 			this->renderer->render();
 		}
 	}
+}
+bool Sprite_Interface::keyboardEventHandler( const SDL_Event *const event)
+{
+	return false;
 }

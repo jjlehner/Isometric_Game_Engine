@@ -14,7 +14,7 @@ public:
 	const Map_Vector_Type::size_type WIDTH;
 	const Map_Type::size_type HEIGHT;
 	const int TILE_EDGE_LENGTH = 30;
-	const int TILE_HEIGHT_UNITS = 9;
+	const int TILE_HEIGHT_UNITS = TILE_EDGE_LENGTH/3;
 	Map_Type height_map{ HEIGHT, std::vector<int>( WIDTH, 0 ) };
 	~Grid() = default;
 	Grid( std::shared_ptr<const Camera>, int width, int height );

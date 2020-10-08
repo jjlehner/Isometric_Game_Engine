@@ -1,3 +1,5 @@
+add_library(thread_safe_containers INTERFACE)
+target_include_directories(thread_safe_containers INTERFACE engine/containers)
 add_library(engine STATIC
         engine/scene/base_objects/Grid.cpp
 
@@ -7,6 +9,8 @@ add_library(engine STATIC
         engine/objects/Man/Man.cpp
         engine/graphics/Textures.cpp engine/window/Window_Controller.hpp)
 target_include_directories(engine PUBLIC engine)
+
+target_link_libraries(engine PUBLIC thread_safe_containers)
 add_executable(main main.cpp)
 
 find_package(SDL2 REQUIRED)

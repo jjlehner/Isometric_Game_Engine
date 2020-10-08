@@ -5,6 +5,7 @@
 #include <atomic>
 #include <thread>
 #include "graphics/Interfaces.hpp"
+#include "Thread_Safe_Queue.hpp"
 class Camera
 {
 private:
@@ -34,6 +35,8 @@ private:
 	class Controller;
 	const std::unique_ptr<Controller> controller;
 public:
+	Thread_Safe_Queue<SDL_Event> event_queue;
+
 	std::atomic<bool> closed{ false };
 	Window();
 	bool isRunning();
@@ -42,5 +45,7 @@ public:
 
 	std::shared_ptr<Camera> getCamera();
 	void setPlayer(Sprite_Interface * spr);
+
+	void tick();
 };
 #endif

@@ -4,21 +4,27 @@
 #include <iostream>
 #include <objects/Man/Man.hpp>
 #include <random>
+
 using namespace std::chrono_literals;
+
+Window w;
 
 int main()
 {
 
-	Window w;
 	Grid grid( w.getCamera(),100, 100 );
 	Man man(w.getCamera());
+	grid.height_map[3][4] = 1;
+	grid.height_map[3][6] =-1;
+	grid.height_map[5][7] = 2;
+	grid.height_map[5][6] = 1;
 	man.renderer->setCamera(w.getCamera());
 	grid.renderer->setCamera( w.getCamera() );
 	w.setPlayer(&man);
 	//grid.attribute->height_map[4][4] = 1;
 	while ( !w.closed )
 	{
-		// tick();
+		w.tick();
 		// render();
 		SDL_SetRenderDrawColor( w.getCamera()->renderer, 0, 0, 0, SDL_ALPHA_OPAQUE );
 

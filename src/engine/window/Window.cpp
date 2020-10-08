@@ -45,16 +45,16 @@ void Window::universal_thread_handler()
 				break;
 				 */
 			case SDL_KEYDOWN:
-				controller->keyboardEventHandler(&e);
+				this->event_queue.push(e);
 				break;
 			case SDL_KEYUP:
-				controller->keyboardEventHandler(&e);
+				this->event_queue.push(e);
 				break;
 			}
 		}
 	}
 }
-Window::Window() : controller(std::make_unique<Controller>())
+Window::Window() : controller( std::make_unique<Controller>() )
 {
 	// Initialize SDL
 	if ( SDL_Init( SDL_INIT_VIDEO ) < 0 )
@@ -91,15 +91,25 @@ std::shared_ptr<Camera> Window::getCamera()
 	return this->camera;
 }
 
-bool Window::Controller::keyboardEventHandler( const SDL_Event *const event)
+bool Window::Controller::keyboardEventHandler( const SDL_Event *const event )
 {
 	if ( player != nullptr )
 	{
-		player->keyboardEventHandler(event);
+		player->keyboardEventHandler( event );
 	}
 	return true;
 }
 
-void Window::setPlayer(Sprite_Interface * spr){
+void Window::setPlayer( Sprite_Interface *spr )
+{
 	this->controller->player = spr;
+}
+
+void Window::tick()
+{
+	std::shared_ptr<SDL_Event> event;
+	while ( event = this->event_queue.pop(), event != nullptr )
+	{
+		controller->keyboardEventHandler( event.get() );
+	}
 }

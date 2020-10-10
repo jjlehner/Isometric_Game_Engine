@@ -7,7 +7,7 @@ add_library(engine STATIC
         engine/scene/base_objects/Game_Object_Interface.cpp
         engine/graphics/Interfaces.cpp
         engine/objects/Man/Man.cpp
-        engine/graphics/Textures.cpp engine/window/Window_Controller.hpp)
+        engine/graphics/Textures.cpp engine/window/Window_Controller.hpp engine/Game.cpp engine/Game.hpp engine/scene/Scene.cpp engine/scene/Scene.hpp)
 target_include_directories(engine PUBLIC engine)
 
 target_link_libraries(engine PUBLIC thread_safe_containers)

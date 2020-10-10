@@ -7,7 +7,7 @@
 
 class Renderer_Interface;
 class Sprite_Interface;
-
+class Camera;
 class Renderer_Interface
 {
 public:

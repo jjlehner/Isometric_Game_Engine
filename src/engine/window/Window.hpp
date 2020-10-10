@@ -19,6 +19,7 @@ public:
 
 	~Camera();
 };
+
 class Sprite_Interface;
 class Window
 {
@@ -34,6 +35,9 @@ private:
 
 	class Controller;
 	const std::unique_ptr<Controller> controller;
+
+	void tick();
+	void render();
 public:
 	Thread_Safe_Queue<SDL_Event> event_queue;
 
@@ -46,6 +50,6 @@ public:
 	std::shared_ptr<Camera> getCamera();
 	void setPlayer(Sprite_Interface * spr);
 
-	void tick();
+	void gameLoop();
 };
 #endif

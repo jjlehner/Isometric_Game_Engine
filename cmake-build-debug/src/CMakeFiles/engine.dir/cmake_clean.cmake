@@ -1,7 +1,9 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/engine.dir/engine/Game.cpp.o"
   "CMakeFiles/engine.dir/engine/graphics/Interfaces.cpp.o"
   "CMakeFiles/engine.dir/engine/graphics/Textures.cpp.o"
   "CMakeFiles/engine.dir/engine/objects/Man/Man.cpp.o"
+  "CMakeFiles/engine.dir/engine/scene/Scene.cpp.o"
   "CMakeFiles/engine.dir/engine/scene/base_objects/Game_Object_Interface.cpp.o"
   "CMakeFiles/engine.dir/engine/scene/base_objects/Grid.cpp.o"
   "CMakeFiles/engine.dir/engine/window/Window.cpp.o"

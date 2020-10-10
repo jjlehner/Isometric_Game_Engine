@@ -138,6 +138,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/jjl119/Programming/Game_Programming/isometric_world/src/engine/Game.cpp">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/home/jjl119/Programming/Game_Programming/isometric_world/src/engine/Game.hpp">
+			<Option target="engine"/>
+		</Unit>
 		<Unit filename="/home/jjl119/Programming/Game_Programming/isometric_world/src/engine/graphics/Interfaces.cpp">
 			<Option target="engine"/>
 		</Unit>
@@ -154,6 +160,12 @@
 			<Option target="engine"/>
 		</Unit>
 		<Unit filename="/home/jjl119/Programming/Game_Programming/isometric_world/src/engine/objects/Man/Man.hpp">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/home/jjl119/Programming/Game_Programming/isometric_world/src/engine/scene/Scene.cpp">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/home/jjl119/Programming/Game_Programming/isometric_world/src/engine/scene/Scene.hpp">
 			<Option target="engine"/>
 		</Unit>
 		<Unit filename="/home/jjl119/Programming/Game_Programming/isometric_world/src/engine/scene/base_objects/Game_Object_Interface.cpp">

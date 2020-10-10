@@ -54,10 +54,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/126/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/129/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/126/bin/cmake/linux/bin/cmake -E rm -f
+RM = /snap/clion/129/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -155,6 +155,32 @@ src/CMakeFiles/engine.dir/engine/graphics/Textures.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/engine.dir/engine/graphics/Textures.cpp.s"
 	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jjl119/Programming/Game_Programming/isometric_world/src/engine/graphics/Textures.cpp -o CMakeFiles/engine.dir/engine/graphics/Textures.cpp.s
 
+src/CMakeFiles/engine.dir/engine/Game.cpp.o: src/CMakeFiles/engine.dir/flags.make
+src/CMakeFiles/engine.dir/engine/Game.cpp.o: ../src/engine/Game.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/CMakeFiles/engine.dir/engine/Game.cpp.o"
+	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/engine/Game.cpp.o -c /home/jjl119/Programming/Game_Programming/isometric_world/src/engine/Game.cpp
+
+src/CMakeFiles/engine.dir/engine/Game.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/engine.dir/engine/Game.cpp.i"
+	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jjl119/Programming/Game_Programming/isometric_world/src/engine/Game.cpp > CMakeFiles/engine.dir/engine/Game.cpp.i
+
+src/CMakeFiles/engine.dir/engine/Game.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/engine.dir/engine/Game.cpp.s"
+	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jjl119/Programming/Game_Programming/isometric_world/src/engine/Game.cpp -o CMakeFiles/engine.dir/engine/Game.cpp.s
+
+src/CMakeFiles/engine.dir/engine/scene/Scene.cpp.o: src/CMakeFiles/engine.dir/flags.make
+src/CMakeFiles/engine.dir/engine/scene/Scene.cpp.o: ../src/engine/scene/Scene.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/CMakeFiles/engine.dir/engine/scene/Scene.cpp.o"
+	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/engine/scene/Scene.cpp.o -c /home/jjl119/Programming/Game_Programming/isometric_world/src/engine/scene/Scene.cpp
+
+src/CMakeFiles/engine.dir/engine/scene/Scene.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/engine.dir/engine/scene/Scene.cpp.i"
+	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jjl119/Programming/Game_Programming/isometric_world/src/engine/scene/Scene.cpp > CMakeFiles/engine.dir/engine/scene/Scene.cpp.i
+
+src/CMakeFiles/engine.dir/engine/scene/Scene.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/engine.dir/engine/scene/Scene.cpp.s"
+	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jjl119/Programming/Game_Programming/isometric_world/src/engine/scene/Scene.cpp -o CMakeFiles/engine.dir/engine/scene/Scene.cpp.s
+
 # Object files for target engine
 engine_OBJECTS = \
 "CMakeFiles/engine.dir/engine/scene/base_objects/Grid.cpp.o" \
@@ -162,7 +188,9 @@ engine_OBJECTS = \
 "CMakeFiles/engine.dir/engine/scene/base_objects/Game_Object_Interface.cpp.o" \
 "CMakeFiles/engine.dir/engine/graphics/Interfaces.cpp.o" \
 "CMakeFiles/engine.dir/engine/objects/Man/Man.cpp.o" \
-"CMakeFiles/engine.dir/engine/graphics/Textures.cpp.o"
+"CMakeFiles/engine.dir/engine/graphics/Textures.cpp.o" \
+"CMakeFiles/engine.dir/engine/Game.cpp.o" \
+"CMakeFiles/engine.dir/engine/scene/Scene.cpp.o"
 
 # External object files for target engine
 engine_EXTERNAL_OBJECTS =
@@ -173,9 +201,11 @@ src/libengine.a: src/CMakeFiles/engine.dir/engine/scene/base_objects/Game_Object
 src/libengine.a: src/CMakeFiles/engine.dir/engine/graphics/Interfaces.cpp.o
 src/libengine.a: src/CMakeFiles/engine.dir/engine/objects/Man/Man.cpp.o
 src/libengine.a: src/CMakeFiles/engine.dir/engine/graphics/Textures.cpp.o
+src/libengine.a: src/CMakeFiles/engine.dir/engine/Game.cpp.o
+src/libengine.a: src/CMakeFiles/engine.dir/engine/scene/Scene.cpp.o
 src/libengine.a: src/CMakeFiles/engine.dir/build.make
 src/libengine.a: src/CMakeFiles/engine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX static library libengine.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX static library libengine.a"
 	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src && $(CMAKE_COMMAND) -P CMakeFiles/engine.dir/cmake_clean_target.cmake
 	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/engine.dir/link.txt --verbose=$(VERBOSE)
 

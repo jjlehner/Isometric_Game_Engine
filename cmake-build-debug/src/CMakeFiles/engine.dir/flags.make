@@ -6,5 +6,5 @@ CXX_FLAGS = -std=c++14 -pthread -g   -std=gnu++14
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/jjl119/Programming/Game_Programming/isometric_world/src/engine -I/usr/include/SDL2 
+CXX_INCLUDES = -I/home/jjl119/Programming/Game_Programming/isometric_world/src/engine -I/usr/include/SDL2 -I/home/jjl119/Programming/Game_Programming/isometric_world/src/engine/containers 
 

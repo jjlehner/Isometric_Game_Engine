@@ -2,6 +2,8 @@
 #include "Window_Controller.hpp"
 #include <SDL2/SDL.h>
 #include <memory>
+#include <objects/Man/Man.hpp>
+#include <scene/base_objects/Grid.hpp>
 #include <thread>
 
 Camera::Camera( SDL_Renderer *_renderer ) : renderer( _renderer )
@@ -45,10 +47,10 @@ void Window::universal_thread_handler()
 				break;
 				 */
 			case SDL_KEYDOWN:
-				this->event_queue.push(e);
+				this->event_queue.push( e );
 				break;
 			case SDL_KEYUP:
-				this->event_queue.push(e);
+				this->event_queue.push( e );
 				break;
 			}
 		}
@@ -104,7 +106,33 @@ void Window::setPlayer( Sprite_Interface *spr )
 {
 	this->controller->player = spr;
 }
+void Window::gameLoop()
+{
+	Grid grid( getCamera(), 100, 100 );
+	Man man( getCamera() );
+	grid.height_map[3][4] = 1;
+	grid.height_map[3][6] = -1;
+	grid.height_map[5][7] = 2;
+	grid.height_map[5][6] = 1;
+	man.renderer->setCamera( getCamera() );
+	grid.renderer->setCamera( getCamera() );
+	setPlayer( &man );
+	while ( !closed )
+	{
+		tick();
+		// render();
+		SDL_SetRenderDrawColor( getCamera()->renderer, 0, 0, 0, SDL_ALPHA_OPAQUE );
 
+		SDL_RenderClear( getCamera()->renderer );
+		grid.render();
+		man.render();
+		auto a = dynamic_cast<Man_Renderer *>( man.renderer );
+		a->texture.setPosition( ( a->texture.getPosition() + 1 ) % 8 );
+		SDL_RenderPresent( getCamera()->renderer );
+		std::chrono::milliseconds sec( 100 );
+		std::this_thread::sleep_for( std::chrono::duration_cast<std::chrono::milliseconds>( sec ) );
+	}
+}
 void Window::tick()
 {
 	std::shared_ptr<SDL_Event> event;
@@ -112,4 +140,8 @@ void Window::tick()
 	{
 		controller->keyboardEventHandler( event.get() );
 	}
+}
+
+void Window::render()
+{
 }

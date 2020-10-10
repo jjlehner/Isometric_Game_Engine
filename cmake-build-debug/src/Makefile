@@ -59,10 +59,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/126/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/129/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/126/bin/cmake/linux/bin/cmake -E rm -f
+RM = /snap/clion/129/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -79,7 +79,7 @@ CMAKE_BINARY_DIR = /home/jjl119/Programming/Game_Programming/isometric_world/cma
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/126/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/129/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -90,7 +90,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/126/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/129/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -159,6 +159,33 @@ main: src/CMakeFiles/main.dir/rule
 main/fast:
 	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/build
 .PHONY : main/fast
+
+engine/Game.o: engine/Game.cpp.o
+
+.PHONY : engine/Game.o
+
+# target to build an object file
+engine/Game.cpp.o:
+	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/engine/Game.cpp.o
+.PHONY : engine/Game.cpp.o
+
+engine/Game.i: engine/Game.cpp.i
+
+.PHONY : engine/Game.i
+
+# target to preprocess a source file
+engine/Game.cpp.i:
+	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/engine/Game.cpp.i
+.PHONY : engine/Game.cpp.i
+
+engine/Game.s: engine/Game.cpp.s
+
+.PHONY : engine/Game.s
+
+# target to generate assembly for a file
+engine/Game.cpp.s:
+	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/engine/Game.cpp.s
+.PHONY : engine/Game.cpp.s
 
 engine/graphics/Interfaces.o: engine/graphics/Interfaces.cpp.o
 
@@ -240,6 +267,33 @@ engine/objects/Man/Man.s: engine/objects/Man/Man.cpp.s
 engine/objects/Man/Man.cpp.s:
 	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/engine/objects/Man/Man.cpp.s
 .PHONY : engine/objects/Man/Man.cpp.s
+
+engine/scene/Scene.o: engine/scene/Scene.cpp.o
+
+.PHONY : engine/scene/Scene.o
+
+# target to build an object file
+engine/scene/Scene.cpp.o:
+	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/engine/scene/Scene.cpp.o
+.PHONY : engine/scene/Scene.cpp.o
+
+engine/scene/Scene.i: engine/scene/Scene.cpp.i
+
+.PHONY : engine/scene/Scene.i
+
+# target to preprocess a source file
+engine/scene/Scene.cpp.i:
+	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/engine/scene/Scene.cpp.i
+.PHONY : engine/scene/Scene.cpp.i
+
+engine/scene/Scene.s: engine/scene/Scene.cpp.s
+
+.PHONY : engine/scene/Scene.s
+
+# target to generate assembly for a file
+engine/scene/Scene.cpp.s:
+	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/engine/scene/Scene.cpp.s
+.PHONY : engine/scene/Scene.cpp.s
 
 engine/scene/base_objects/Game_Object_Interface.o: engine/scene/base_objects/Game_Object_Interface.cpp.o
 
@@ -359,6 +413,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... engine"
 	@echo "... main"
+	@echo "... engine/Game.o"
+	@echo "... engine/Game.i"
+	@echo "... engine/Game.s"
 	@echo "... engine/graphics/Interfaces.o"
 	@echo "... engine/graphics/Interfaces.i"
 	@echo "... engine/graphics/Interfaces.s"
@@ -368,6 +425,9 @@ help:
 	@echo "... engine/objects/Man/Man.o"
 	@echo "... engine/objects/Man/Man.i"
 	@echo "... engine/objects/Man/Man.s"
+	@echo "... engine/scene/Scene.o"
+	@echo "... engine/scene/Scene.i"
+	@echo "... engine/scene/Scene.s"
 	@echo "... engine/scene/base_objects/Game_Object_Interface.o"
 	@echo "... engine/scene/base_objects/Game_Object_Interface.i"
 	@echo "... engine/scene/base_objects/Game_Object_Interface.s"

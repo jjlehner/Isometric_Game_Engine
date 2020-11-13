@@ -1,5 +1,3 @@
-// Using SDL and standard IO
-#include "Window_Controller.hpp"
 #include <SDL2/SDL.h>
 #include <memory>
 #include <objects/Man/Man.hpp>
@@ -8,6 +6,39 @@
 
 Camera::Camera( SDL_Renderer *_renderer ) : renderer( _renderer )
 {
+}
+void Camera::tick()
+{
+	constexpr unsigned int ISOMETRIC_RATIO = 2;
+	constexpr unsigned int SPEED = 2;
+	if ( track_player )
+	{
+		if ( buttons_engaged[SDLK_w] )
+		{
+			y -= SPEED;
+		}
+		if ( buttons_engaged[SDLK_s] )
+		{
+			y += SPEED;
+		}
+		if ( buttons_engaged[SDLK_d] )
+		{
+			x += SPEED * ISOMETRIC_RATIO;
+		}
+		if ( buttons_engaged[SDLK_a] )
+		{
+			x-=SPEED * ISOMETRIC_RATIO;
+		}
+	}
+}
+void Camera::keyboardHandler( const SDL_Event *const event)
+{
+	if(event->type==SDL_KEYDOWN){
+		buttons_engaged[event->key.keysym.sym] = true;
+	}
+	else if(event->type==SDL_KEYUP){
+		buttons_engaged[event->key.keysym.sym] = false;
+	}
 }
 Camera::~Camera()
 {
@@ -56,7 +87,7 @@ void Window::universal_thread_handler()
 		}
 	}
 }
-Window::Window() : controller( std::make_unique<Controller>() )
+Window::Window()
 {
 	// Initialize SDL
 	if ( SDL_Init( SDL_INIT_VIDEO ) < 0 )
@@ -93,7 +124,7 @@ std::shared_ptr<Camera> Window::getCamera()
 	return this->camera;
 }
 
-bool Window::Controller::keyboardEventHandler( const SDL_Event *const event )
+bool Window::keyboardEventHandler( const SDL_Event *const event )
 {
 	if ( player != nullptr )
 	{
@@ -104,33 +135,33 @@ bool Window::Controller::keyboardEventHandler( const SDL_Event *const event )
 
 void Window::setPlayer( Sprite_Interface *spr )
 {
-	this->controller->player = spr;
+	this->player = spr;
+	this->camera->track_player = true;
 }
 void Window::gameLoop()
 {
 	Grid grid( getCamera(), 100, 100 );
 	Man man( getCamera() );
 	grid.height_map[3][4] = 1;
-	grid.height_map[3][6] = -1;
-	grid.height_map[5][7] = 2;
+	grid.height_map[3][6] = 1;
+	grid.height_map[5][7] = 1;
 	grid.height_map[5][6] = 1;
 	man.renderer->setCamera( getCamera() );
 	grid.renderer->setCamera( getCamera() );
+
+	this->current_scene->addSpriteToScene(&grid);
+	this->current_scene->addSpriteToScene(&man);
 	setPlayer( &man );
+
+	Uint32 start = SDL_GetTicks();
 	while ( !closed )
 	{
-		tick();
-		// render();
-		SDL_SetRenderDrawColor( getCamera()->renderer, 0, 0, 0, SDL_ALPHA_OPAQUE );
-
-		SDL_RenderClear( getCamera()->renderer );
-		grid.render();
-		man.render();
-		auto a = dynamic_cast<Man_Renderer *>( man.renderer );
-		a->texture.setPosition( ( a->texture.getPosition() + 1 ) % 8 );
-		SDL_RenderPresent( getCamera()->renderer );
-		std::chrono::milliseconds sec( 100 );
-		std::this_thread::sleep_for( std::chrono::duration_cast<std::chrono::milliseconds>( sec ) );
+		if(SDL_GetTicks() - start >= MILLISECONDS_PER_TICK)
+		{
+			tick();
+			render();
+			start = SDL_GetTicks();
+		}
 	}
 }
 void Window::tick()
@@ -138,10 +169,20 @@ void Window::tick()
 	std::shared_ptr<SDL_Event> event;
 	while ( event = this->event_queue.pop(), event != nullptr )
 	{
-		controller->keyboardEventHandler( event.get() );
+		camera->keyboardHandler(event.get());
+	}
+	camera->tick();
+	for(Sprite_Interface*const x : current_scene->getSprites()){
+		x->tick();
 	}
 }
 
 void Window::render()
 {
+	SDL_SetRenderDrawColor( getCamera()->renderer, 0, 0, 0, SDL_ALPHA_OPAQUE );
+	SDL_RenderClear( getCamera()->renderer );
+	for(Sprite_Interface*const x : current_scene->getSprites()){
+		x->render();
+	}
+	SDL_RenderPresent( getCamera()->renderer );
 }

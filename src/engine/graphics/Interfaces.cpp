@@ -1,11 +1,11 @@
 #include "Interfaces.hpp"
 #include <memory>
 
-Renderer_Interface::Renderer_Interface( std::shared_ptr<const Camera> _camera ): camera(_camera)
+Renderer_Interface::Renderer_Interface( std::shared_ptr<Camera> _camera ): camera(_camera)
 {
 }
 
-void Renderer_Interface::setCamera( std::shared_ptr<const Camera> _camera )
+void Renderer_Interface::setCamera( std::shared_ptr<Camera> _camera )
 {
 	this->camera = _camera;
 }
@@ -17,11 +17,16 @@ bool Renderer_Interface::isCameraSet(){
 	}
 	return false;
 }
+
 Sprite_Interface::~Sprite_Interface()
 {
 	if( this->renderer != nullptr ){
 		delete renderer;
 	}
+}
+
+void Sprite_Interface::tick()
+{
 }
 void Sprite_Interface::render() const
 {
@@ -31,7 +36,9 @@ void Sprite_Interface::render() const
 		}
 	}
 }
+
 bool Sprite_Interface::keyboardEventHandler( const SDL_Event *const event)
 {
 	return false;
 }
+

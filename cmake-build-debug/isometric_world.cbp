@@ -186,9 +186,6 @@
 		<Unit filename="/home/jjl119/Programming/Game_Programming/isometric_world/src/engine/window/Window.hpp">
 			<Option target="engine"/>
 		</Unit>
-		<Unit filename="/home/jjl119/Programming/Game_Programming/isometric_world/src/engine/window/Window_Controller.hpp">
-			<Option target="engine"/>
-		</Unit>
 		<Unit filename="/home/jjl119/Programming/Game_Programming/isometric_world/src/main.cpp">
 			<Option target="main"/>
 		</Unit>

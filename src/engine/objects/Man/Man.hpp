@@ -9,9 +9,17 @@ class Man;
 
 class Man : public Sprite_Interface
 {
+private:
+	enum class Facing_Direction{
+		NONE, NORTH, NORTH_EAST, EAST, SOUTH_EAST, SOUTH, SOUTH_WEST, WEST, NORTH_WEST
+	};
+	bool running = false;
+
+	Facing_Direction dir = Facing_Direction::EAST;
 public:
-	Man( std::shared_ptr<const Camera> );
-	virtual bool keyboardEventHandler( const SDL_Event *const ) override;
+	Man( std::shared_ptr<Camera> );
+	virtual void tick() override;
+	virtual ~Man();
 };
 
 class Man_Renderer : public Renderer_Interface
@@ -23,9 +31,9 @@ private:
 public:
 	Animated_Texture texture;
 
-	Man_Renderer( std::shared_ptr<const Camera>, const Man *const man );
+	Man_Renderer( std::shared_ptr<Camera>, const Man *const man );
 	const Man *const getSprite() const override;
-	void render() const;
+	void render() const override;
 };
 
 #endif // ISOMETRIC_WORLD_MAN_HPP

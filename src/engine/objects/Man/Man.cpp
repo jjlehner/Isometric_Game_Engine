@@ -5,7 +5,7 @@
 #include "Man.hpp"
 #include <iostream>
 #include <memory>
-Man_Renderer::Man_Renderer( std::shared_ptr<const Camera> camera, const Man *const man )
+Man_Renderer::Man_Renderer( std::shared_ptr<Camera> camera, const Man *const man )
 	: Renderer_Interface( camera ), MAN( man ), texture( this, "../res/generic_man.png", 138, 138 )
 {
 }
@@ -20,30 +20,35 @@ const Man *const Man_Renderer::getSprite() const
 	return MAN;
 }
 
-Man::Man( std::shared_ptr<const Camera> camera )
+Man::Man( std::shared_ptr<Camera> camera )
 {
 	renderer = new Man_Renderer( camera, this );
 }
 
-bool Man::keyboardEventHandler( const SDL_Event *const event )
+void Man::tick()
 {
-	switch ( event->key.keysym.sym )
+	constexpr unsigned int ISOMETRIC_RATIO = 2;
+	constexpr unsigned int SPEED = 2;
+	if ( renderer->isCameraSet() )
 	{
-	case SDLK_UP:
-		y -= 1;
-		break;
-	case SDLK_DOWN:
-		y += 1;
-		break;
-	case SDLK_LEFT:
-		x -= 2;
-		break;
-	case SDLK_RIGHT:
-		x += 2;
-		break;
-	case SDLK_SPACE:
-		x -= 200;
-		break;
+		if ( renderer->camera->buttons_engaged[SDLK_w] )
+		{
+			y -= SPEED;
+		}
+		if ( renderer->camera->buttons_engaged[SDLK_s] )
+		{
+			y += SPEED;
+		}
+		if ( renderer->camera->buttons_engaged[SDLK_d] )
+		{
+			x += SPEED * ISOMETRIC_RATIO;
+		}
+		if ( renderer->camera->buttons_engaged[SDLK_a] )
+		{
+			x-=SPEED * ISOMETRIC_RATIO;
+		}
 	}
-	return true;
+}
+Man::~Man()
+{
 }

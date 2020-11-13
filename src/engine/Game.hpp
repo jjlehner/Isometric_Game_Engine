@@ -4,10 +4,11 @@
 
 #include "window/Window.hpp"
 class Game{
-	Window w;
-	void start();
+	Window* w = new Window();
 public:
 	void gameStart();
-
+	void gameStop();
+	void pauseGame();
+	~Game();
 };
 #endif

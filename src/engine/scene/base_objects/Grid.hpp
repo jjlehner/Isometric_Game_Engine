@@ -17,7 +17,7 @@ public:
 	const int TILE_HEIGHT_UNITS = TILE_EDGE_LENGTH/3;
 	Map_Type height_map{ HEIGHT, std::vector<int>( WIDTH, 0 ) };
 	~Grid() = default;
-	Grid( std::shared_ptr<const Camera>, int width, int height );
+	Grid( std::shared_ptr<Camera>, int width, int height );
 };
 
 class Grid_Renderer : public Renderer_Interface
@@ -27,7 +27,7 @@ private:
 
 public:
 	virtual const Grid *const getSprite() const;
-	Grid_Renderer( std::shared_ptr<const Camera> camera, const Grid *const grid );
+	Grid_Renderer( std::shared_ptr<Camera> camera, const Grid *const grid );
 	virtual void render() const override;
 	virtual ~Grid_Renderer() = default;
 };

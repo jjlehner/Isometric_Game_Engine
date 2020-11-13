@@ -4,6 +4,7 @@
 src/CMakeFiles/main.dir/main.cpp.o: ../src/engine/Game.hpp
 src/CMakeFiles/main.dir/main.cpp.o: ../src/engine/containers/Thread_Safe_Queue.hpp
 src/CMakeFiles/main.dir/main.cpp.o: ../src/engine/graphics/Interfaces.hpp
+src/CMakeFiles/main.dir/main.cpp.o: ../src/engine/scene/Scene.hpp
 src/CMakeFiles/main.dir/main.cpp.o: ../src/engine/scene/base_objects/Game_Object_Interface.hpp
 src/CMakeFiles/main.dir/main.cpp.o: ../src/engine/window/Window.hpp
 src/CMakeFiles/main.dir/main.cpp.o: ../src/main.cpp

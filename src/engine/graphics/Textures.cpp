@@ -64,8 +64,8 @@ Texture::~Texture()
 }
 void Animated_Texture::render() const
 {
-	dest_rect.x = RENDERER->getSprite()->x;
-	dest_rect.y = RENDERER->getSprite()->y;
+	dest_rect.x = RENDERER->getSprite()->x+RENDERER->camera->x;
+	dest_rect.y = RENDERER->getSprite()->y+RENDERER->camera->y;
 	SDL_RenderCopy( RENDERER->camera->renderer, texture, &src_rect, &dest_rect );
 }
 bool Animated_Texture::setPosition( unsigned int position )

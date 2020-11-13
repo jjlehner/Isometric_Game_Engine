@@ -3,17 +3,17 @@
 #include <SDL.h>
 #include <memory>
 
-Grid::Grid( std::shared_ptr<const Camera> camera, int width, int height ) : WIDTH(width), HEIGHT(height)
+Grid::Grid( std::shared_ptr<Camera> camera, int width, int height ) : WIDTH( width ), HEIGHT( height )
 {
-	renderer = new Grid_Renderer(camera, this);
+	renderer = new Grid_Renderer( camera, this );
 }
 const Grid *const Grid_Renderer::getSprite() const
 {
 	return GRID;
 }
-Grid_Renderer::Grid_Renderer(std::shared_ptr<const Camera> camera, const Grid* const grid ) : Renderer_Interface(camera), GRID(grid)
+Grid_Renderer::Grid_Renderer( std::shared_ptr<Camera> camera, const Grid *const grid )
+	: Renderer_Interface( camera ), GRID( grid )
 {
-
 }
 
 void Grid_Renderer::render() const
@@ -39,16 +39,18 @@ void Grid_Renderer::render() const
 			int height_x_delta = GRID->height_map[y + 1][x] * GRID->TILE_HEIGHT_UNITS;
 			int height_y_delta = GRID->height_map[y][x + 1] * GRID->TILE_HEIGHT_UNITS;
 
-			float iso_x_start = xF - yF + camera->x;
-			float iso_y_start = ( yF + xF ) / 2.0 + camera->y - height_start;
+			float iso_x_start = xF - yF;
+			float iso_y_start = ( yF + xF ) / 2.0 - height_start;
 
-			float iso_x_x_delta = xF - yF_con + camera->x;
-			float iso_y_x_delta = ( yF_con + xF ) / 2.0 + camera->y - height_x_delta;
+			float iso_x_x_delta = xF - yF_con;
+			float iso_y_x_delta = ( yF_con + xF ) / 2.0 - height_x_delta;
 
-			float iso_x_y_delta = xF_con - yF + camera->x;
-			float iso_y_y_delta = ( yF + xF_con ) / 2.0 + camera->y - height_y_delta;
-			SDL_RenderDrawLine( camera->renderer, iso_x_start, iso_y_start, iso_x_x_delta, iso_y_x_delta );
-			SDL_RenderDrawLine( camera->renderer, iso_x_start, iso_y_start, iso_x_y_delta, iso_y_y_delta );
+			float iso_x_y_delta = xF_con - yF;
+			float iso_y_y_delta = ( yF + xF_con ) / 2.0 - height_y_delta;
+			SDL_RenderDrawLine( camera->renderer, iso_x_start - camera->x, iso_y_start - camera->y,
+								iso_x_x_delta - camera->x, iso_y_x_delta - camera->y );
+			SDL_RenderDrawLine( camera->renderer, iso_x_start - camera->x, iso_y_start - camera->y,
+								iso_x_y_delta - camera->x, iso_y_y_delta - camera->y );
 		}
 	}
 }

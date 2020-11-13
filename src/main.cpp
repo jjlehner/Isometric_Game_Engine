@@ -2,7 +2,7 @@
 #include <thread>
 int main()
 {
-	Game *g;
+	Game *g = new Game;
 	std::thread gameThread(&Game::gameStart,g);
 	gameThread.join();
 }

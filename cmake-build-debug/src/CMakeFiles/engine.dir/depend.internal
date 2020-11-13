@@ -4,6 +4,7 @@
 src/CMakeFiles/engine.dir/engine/Game.cpp.o
  ../src/engine/containers/Thread_Safe_Queue.hpp
  ../src/engine/graphics/Interfaces.hpp
+ ../src/engine/scene/Scene.hpp
  ../src/engine/scene/base_objects/Game_Object_Interface.hpp
  /home/jjl119/Programming/Game_Programming/isometric_world/src/engine/Game.cpp
  /home/jjl119/Programming/Game_Programming/isometric_world/src/engine/Game.hpp
@@ -56,6 +57,7 @@ src/CMakeFiles/engine.dir/engine/Game.cpp.o
 src/CMakeFiles/engine.dir/engine/graphics/Interfaces.cpp.o
  ../src/engine/containers/Thread_Safe_Queue.hpp
  ../src/engine/graphics/Interfaces.hpp
+ ../src/engine/scene/Scene.hpp
  ../src/engine/scene/base_objects/Game_Object_Interface.hpp
  ../src/engine/window/Window.hpp
  /home/jjl119/Programming/Game_Programming/isometric_world/src/engine/graphics/Interfaces.cpp
@@ -108,6 +110,7 @@ src/CMakeFiles/engine.dir/engine/graphics/Interfaces.cpp.o
 src/CMakeFiles/engine.dir/engine/graphics/Textures.cpp.o
  ../src/engine/containers/Thread_Safe_Queue.hpp
  ../src/engine/graphics/Interfaces.hpp
+ ../src/engine/scene/Scene.hpp
  ../src/engine/scene/base_objects/Game_Object_Interface.hpp
  ../src/engine/window/Window.hpp
  /home/jjl119/Programming/Game_Programming/isometric_world/src/engine/graphics/Interfaces.hpp
@@ -163,6 +166,7 @@ src/CMakeFiles/engine.dir/engine/objects/Man/Man.cpp.o
  ../src/engine/containers/Thread_Safe_Queue.hpp
  ../src/engine/graphics/Interfaces.hpp
  ../src/engine/graphics/Textures.hpp
+ ../src/engine/scene/Scene.hpp
  ../src/engine/scene/base_objects/Game_Object_Interface.hpp
  ../src/engine/window/Window.hpp
  /home/jjl119/Programming/Game_Programming/isometric_world/src/engine/objects/Man/Man.cpp
@@ -216,6 +220,7 @@ src/CMakeFiles/engine.dir/engine/objects/Man/Man.cpp.o
 src/CMakeFiles/engine.dir/engine/scene/Scene.cpp.o
  ../src/engine/containers/Thread_Safe_Queue.hpp
  ../src/engine/graphics/Interfaces.hpp
+ ../src/engine/scene/Scene.hpp
  ../src/engine/scene/base_objects/Game_Object_Interface.hpp
  ../src/engine/window/Window.hpp
  /home/jjl119/Programming/Game_Programming/isometric_world/src/engine/scene/Scene.cpp
@@ -271,6 +276,7 @@ src/CMakeFiles/engine.dir/engine/scene/base_objects/Game_Object_Interface.cpp.o
 src/CMakeFiles/engine.dir/engine/scene/base_objects/Grid.cpp.o
  ../src/engine/containers/Thread_Safe_Queue.hpp
  ../src/engine/graphics/Interfaces.hpp
+ ../src/engine/scene/Scene.hpp
  ../src/engine/scene/base_objects/Game_Object_Interface.hpp
  ../src/engine/window/Window.hpp
  /home/jjl119/Programming/Game_Programming/isometric_world/src/engine/scene/base_objects/Grid.cpp
@@ -325,11 +331,11 @@ src/CMakeFiles/engine.dir/engine/window/Window.cpp.o
  ../src/engine/graphics/Interfaces.hpp
  ../src/engine/graphics/Textures.hpp
  ../src/engine/objects/Man/Man.hpp
+ ../src/engine/scene/Scene.hpp
  ../src/engine/scene/base_objects/Game_Object_Interface.hpp
  ../src/engine/scene/base_objects/Grid.hpp
  ../src/engine/window/Window.hpp
  /home/jjl119/Programming/Game_Programming/isometric_world/src/engine/window/Window.cpp
- /home/jjl119/Programming/Game_Programming/isometric_world/src/engine/window/Window_Controller.hpp
  /usr/include/SDL2/SDL.h
  /usr/include/SDL2/SDL_assert.h
  /usr/include/SDL2/SDL_atomic.h

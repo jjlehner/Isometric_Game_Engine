@@ -11,14 +11,14 @@ class Camera;
 class Renderer_Interface
 {
 public:
-	std::shared_ptr<const Camera> camera = nullptr;
+	std::shared_ptr<Camera> camera = nullptr;
 
-	Renderer_Interface(std::shared_ptr<const Camera> camera);
+	Renderer_Interface(std::shared_ptr<Camera> camera);
 	virtual ~Renderer_Interface() = default;
 
 	virtual void render() const = 0;
 
-	void setCamera( std::shared_ptr<const Camera> );
+	void setCamera( std::shared_ptr<Camera> );
 	bool isCameraSet();
 
 	virtual const Sprite_Interface* const getSprite() const = 0;
@@ -27,10 +27,11 @@ public:
 class Sprite_Interface : public Game_Object_Interface
 {
 public:
-	int x = 300;
-	int y = 500;
-	int z = 10;
+	int x = 0;
+	int y = 0;
+	int z = 0;
 	Renderer_Interface* renderer = nullptr;
+	virtual void tick();
 	void render() const;
 	virtual ~Sprite_Interface();
 	virtual bool keyboardEventHandler(const SDL_Event*const);

@@ -8,25 +8,6 @@
 #include <atomic>
 #include <map>
 #include <thread>
-class Camera
-{
-public:
-	int x = 500;
-	int y = 0;
-	int zoom = 1;
-
-	bool track_player = false;
-
-	SDL_Renderer *renderer = nullptr;
-
-	std::map<SDL_Keycode, bool> buttons_engaged;
-
-	void keyboardHandler( const SDL_Event *const );
-	Camera( SDL_Renderer * );
-
-	void tick();
-	~Camera();
-};
 
 class Sprite_Interface;
 class Scene;
@@ -38,25 +19,29 @@ private:
 	// The window we'll be rendering to
 	SDL_Window *window = nullptr;
 
-	std::shared_ptr<Camera> camera = nullptr;
-	std::shared_ptr<Scene> current_scene = std::make_shared<Scene>();
+	Scene *current_scene;
 
 	void universal_thread_handler();
 
-	Sprite_Interface *player = nullptr;
 	bool keyboardEventHandler( const SDL_Event *const );
 
 	void tick();
 	void render();
 
 public:
-	Thread_Safe_Queue<SDL_Event> event_queue;
+	const unsigned int WIDTH = 2000;
+	const unsigned int HEIGHT = 1000;
+
+	SDL_Renderer *renderer;
 
 	std::atomic<bool> closed{ false };
+
 	Window();
-	bool isRunning();
 	~Window();
+
+	void loadScene(Scene *scene);
 	void modifyScreen();
+	bool isRunning();
 
 	std::shared_ptr<Camera> getCamera();
 	void setPlayer( Sprite_Interface *spr );

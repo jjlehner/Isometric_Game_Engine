@@ -1,40 +1,41 @@
 #ifndef GUARD_SPRITE_INTERFACE_HPP
 #define GUARD_SPRITE_INTERFACE_HPP
-#include "scene/base_objects/Game_Object_Interface.hpp"
-#include "window/Window.hpp"
+
 #include <SDL.h>
 #include <memory>
 
-class Renderer_Interface;
+#include "scene/base_objects/Game_Object_Interface.hpp"
+
+template<typename Renderer> requires std::derived_from<Renderer, Renderer_Interface>
 class Sprite_Interface;
+
 class Camera;
-class Renderer_Interface
-{
+
+class Renderer_Interface {
+protected:
+    Camera *camera = nullptr;
+
 public:
-	std::shared_ptr<Camera> camera = nullptr;
+    virtual ~Renderer_Interface() = default;
 
-	Renderer_Interface(std::shared_ptr<Camera> camera);
-	virtual ~Renderer_Interface() = default;
-
-	virtual void render() const = 0;
-
-	void setCamera( std::shared_ptr<Camera> );
-	bool isCameraSet();
-
-	virtual const Sprite_Interface* const getSprite() const = 0;
+    virtual void render() const = 0;
 };
 
-class Sprite_Interface : public Game_Object_Interface
-{
+template<typename Renderer> requires std::derived_from<Renderer, Renderer_Interface>
+class Sprite_Interface : public Game_Object_Interface {
 public:
-	int x = 0;
-	int y = 0;
-	int z = 0;
-	Renderer_Interface* renderer = nullptr;
-	virtual void tick();
-	void render() const;
-	virtual ~Sprite_Interface();
-	virtual bool keyboardEventHandler(const SDL_Event*const);
+    int x = 0;
+    int y = 0;
+    int z = 0;
+
+    virtual void tick() = 0;
+
+    virtual void render() const = 0;
+
+    Sprite_Interface(Camera  * camera);
+    virtual ~Sprite_Interface() = default;
+
+    virtual bool keyboardEventHandler(const SDL_Event *const);
 };
 
 

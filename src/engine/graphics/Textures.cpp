@@ -62,7 +62,7 @@ Texture::~Texture()
 		SDL_DestroyTexture(texture);
 	}
 }
-void Animated_Texture::render() const
+void Animated_Texture::render(Camera *camera) const
 {
 	dest_rect.x = RENDERER->getSprite()->x+RENDERER->camera->x;
 	dest_rect.y = RENDERER->getSprite()->y+RENDERER->camera->y;

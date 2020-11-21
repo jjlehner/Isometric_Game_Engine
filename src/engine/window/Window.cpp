@@ -3,50 +3,8 @@
 #include <objects/Man/Man.hpp>
 #include <scene/base_objects/Grid.hpp>
 #include <thread>
+#include "Window.hpp"
 
-Camera::Camera( SDL_Renderer *_renderer ) : renderer( _renderer )
-{
-}
-void Camera::tick()
-{
-	constexpr unsigned int ISOMETRIC_RATIO = 2;
-	constexpr unsigned int SPEED = 2;
-	if ( track_player )
-	{
-		if ( buttons_engaged[SDLK_w] )
-		{
-			y -= SPEED;
-		}
-		if ( buttons_engaged[SDLK_s] )
-		{
-			y += SPEED;
-		}
-		if ( buttons_engaged[SDLK_d] )
-		{
-			x += SPEED * ISOMETRIC_RATIO;
-		}
-		if ( buttons_engaged[SDLK_a] )
-		{
-			x-=SPEED * ISOMETRIC_RATIO;
-		}
-	}
-}
-void Camera::keyboardHandler( const SDL_Event *const event)
-{
-	if(event->type==SDL_KEYDOWN){
-		buttons_engaged[event->key.keysym.sym] = true;
-	}
-	else if(event->type==SDL_KEYUP){
-		buttons_engaged[event->key.keysym.sym] = false;
-	}
-}
-Camera::~Camera()
-{
-	SDL_DestroyRenderer( renderer );
-}
-// Screen dimension constants
-const int SCREEN_WIDTH = 2000;
-const int SCREEN_HEIGHT = 1000;
 
 void Window::universal_thread_handler()
 {
@@ -78,10 +36,10 @@ void Window::universal_thread_handler()
 				break;
 				 */
 			case SDL_KEYDOWN:
-				this->event_queue.push( e );
+				current_scene->event_queue.push( e );
 				break;
 			case SDL_KEYUP:
-				this->event_queue.push( e );
+				current_scene->event_queue.push( e );
 				break;
 			}
 		}
@@ -97,8 +55,8 @@ Window::Window()
 	else
 	{
 		// Create window
-		window = SDL_CreateWindow( "Isometric World", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH,
-								   SCREEN_HEIGHT, SDL_WINDOW_SHOWN );
+		window = SDL_CreateWindow( "Isometric World", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, WIDTH,
+								   HEIGHT, SDL_WINDOW_SHOWN );
 		if ( window == NULL )
 		{
 			printf( "Window could not be created! SDL_Error: %s\n", SDL_GetError() );
@@ -107,10 +65,10 @@ Window::Window()
 		{
 			handler = std::thread( &Window::universal_thread_handler, this );
 			handler.detach();
-			SDL_Renderer *renderer = SDL_CreateRenderer( window, -1, SDL_RENDERER_ACCELERATED );
-			camera = std::make_shared<Camera>( renderer );
+			renderer = SDL_CreateRenderer( window, -1, SDL_RENDERER_ACCELERATED );
 		}
 	}
+
 }
 Window::~Window()
 {
@@ -119,40 +77,13 @@ Window::~Window()
 	// Quit SDL subsystems
 	SDL_Quit();
 }
-std::shared_ptr<Camera> Window::getCamera()
-{
-	return this->camera;
-}
 
-bool Window::keyboardEventHandler( const SDL_Event *const event )
+void Window::loadScene(Scene * _scene)
 {
-	if ( player != nullptr )
-	{
-		player->keyboardEventHandler( event );
-	}
-	return true;
-}
-
-void Window::setPlayer( Sprite_Interface *spr )
-{
-	this->player = spr;
-	this->camera->track_player = true;
+	this->current_scene = _scene;
 }
 void Window::gameLoop()
 {
-	Grid grid( getCamera(), 100, 100 );
-	Man man( getCamera() );
-	grid.height_map[3][4] = 1;
-	grid.height_map[3][6] = 1;
-	grid.height_map[5][7] = 1;
-	grid.height_map[5][6] = 1;
-	man.renderer->setCamera( getCamera() );
-	grid.renderer->setCamera( getCamera() );
-
-	this->current_scene->addSpriteToScene(&grid);
-	this->current_scene->addSpriteToScene(&man);
-	setPlayer( &man );
-
 	Uint32 start = SDL_GetTicks();
 	while ( !closed )
 	{
@@ -166,15 +97,7 @@ void Window::gameLoop()
 }
 void Window::tick()
 {
-	std::shared_ptr<SDL_Event> event;
-	while ( event = this->event_queue.pop(), event != nullptr )
-	{
-		camera->keyboardHandler(event.get());
-	}
-	camera->tick();
-	for(Sprite_Interface*const x : current_scene->getSprites()){
-		x->tick();
-	}
+	current_scene->tick();
 }
 
 void Window::render()
@@ -186,3 +109,4 @@ void Window::render()
 	}
 	SDL_RenderPresent( getCamera()->renderer );
 }
+

@@ -3,6 +3,5 @@
 int main()
 {
 	Game *g = new Game;
-	std::thread gameThread(&Game::gameStart,g);
-	gameThread.join();
+	g->gameStart();
 }

@@ -1,0 +1,6 @@
+<map id="Sprite_Interface" name="Sprite_Interface">
+<area shape="rect" id="node1" title=" " alt="" coords="28,80,143,107"/>
+<area shape="rect" id="node3" href="$class_grid.html" title=" " alt="" coords="27,155,74,181"/>
+<area shape="rect" id="node4" href="$class_man.html" title=" " alt="" coords="98,155,145,181"/>
+<area shape="rect" id="node2" href="$class_game___object___interface.html" title=" " alt="" coords="5,5,165,32"/>
+</map>

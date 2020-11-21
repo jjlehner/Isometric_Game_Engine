@@ -17,7 +17,8 @@ protected:
 	mutable SDL_Rect dest_rect;
 public:
 	Texture( const Renderer_Interface* const renderer, const std::string path );
-	virtual void render() const = 0;
+	virtual void tick();
+	void render(Camera * camera) const;
 	virtual ~Texture();
 };
 
@@ -28,12 +29,15 @@ private:
 	int NUM_OF_TILES;
 	int loop_frequency = 0;
 	unsigned int position = 0;
+	Camera * camera;
 public:
-	Animated_Texture( const Renderer_Interface* const renderer, const std::string path, int width_of_tile, int height_of_tile );
-	virtual void render() const override;
+	Animated_Texture( const std::string path, int width_of_tile, int height_of_tile );
+	virtual ~Animated_Texture() = default;
+
+	virtual void tick();
+
 	bool setPosition( unsigned int position );
 	unsigned int getPosition();
-	virtual ~Animated_Texture() = default;
 };
 
 #endif // ISOMETRIC_WORLD_TEXTURE_HPP

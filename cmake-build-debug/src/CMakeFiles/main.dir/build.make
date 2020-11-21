@@ -80,15 +80,15 @@ include src/CMakeFiles/main.dir/flags.make
 src/CMakeFiles/main.dir/main.cpp.o: src/CMakeFiles/main.dir/flags.make
 src/CMakeFiles/main.dir/main.cpp.o: ../src/main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/main.dir/main.cpp.o"
-	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/main.cpp.o -c /home/jjl119/Programming/Game_Programming/isometric_world/src/main.cpp
+	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src && /usr/bin/g++-10  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/main.cpp.o -c /home/jjl119/Programming/Game_Programming/isometric_world/src/main.cpp
 
 src/CMakeFiles/main.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/main.cpp.i"
-	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jjl119/Programming/Game_Programming/isometric_world/src/main.cpp > CMakeFiles/main.dir/main.cpp.i
+	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src && /usr/bin/g++-10 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jjl119/Programming/Game_Programming/isometric_world/src/main.cpp > CMakeFiles/main.dir/main.cpp.i
 
 src/CMakeFiles/main.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/main.cpp.s"
-	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jjl119/Programming/Game_Programming/isometric_world/src/main.cpp -o CMakeFiles/main.dir/main.cpp.s
+	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src && /usr/bin/g++-10 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jjl119/Programming/Game_Programming/isometric_world/src/main.cpp -o CMakeFiles/main.dir/main.cpp.s
 
 # Object files for target main
 main_OBJECTS = \

@@ -160,6 +160,33 @@ main/fast:
 	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/build
 .PHONY : main/fast
 
+Testing_Utilities.o: Testing_Utilities.cpp.o
+
+.PHONY : Testing_Utilities.o
+
+# target to build an object file
+Testing_Utilities.cpp.o:
+	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/Testing_Utilities.cpp.o
+.PHONY : Testing_Utilities.cpp.o
+
+Testing_Utilities.i: Testing_Utilities.cpp.i
+
+.PHONY : Testing_Utilities.i
+
+# target to preprocess a source file
+Testing_Utilities.cpp.i:
+	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/Testing_Utilities.cpp.i
+.PHONY : Testing_Utilities.cpp.i
+
+Testing_Utilities.s: Testing_Utilities.cpp.s
+
+.PHONY : Testing_Utilities.s
+
+# target to generate assembly for a file
+Testing_Utilities.cpp.s:
+	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/Testing_Utilities.cpp.s
+.PHONY : Testing_Utilities.cpp.s
+
 engine/Game.o: engine/Game.cpp.o
 
 .PHONY : engine/Game.o
@@ -267,6 +294,33 @@ engine/objects/Man/Man.s: engine/objects/Man/Man.cpp.s
 engine/objects/Man/Man.cpp.s:
 	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/engine/objects/Man/Man.cpp.s
 .PHONY : engine/objects/Man/Man.cpp.s
+
+engine/scene/Camera.o: engine/scene/Camera.cpp.o
+
+.PHONY : engine/scene/Camera.o
+
+# target to build an object file
+engine/scene/Camera.cpp.o:
+	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/engine/scene/Camera.cpp.o
+.PHONY : engine/scene/Camera.cpp.o
+
+engine/scene/Camera.i: engine/scene/Camera.cpp.i
+
+.PHONY : engine/scene/Camera.i
+
+# target to preprocess a source file
+engine/scene/Camera.cpp.i:
+	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/engine/scene/Camera.cpp.i
+.PHONY : engine/scene/Camera.cpp.i
+
+engine/scene/Camera.s: engine/scene/Camera.cpp.s
+
+.PHONY : engine/scene/Camera.s
+
+# target to generate assembly for a file
+engine/scene/Camera.cpp.s:
+	cd /home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/engine.dir/build.make src/CMakeFiles/engine.dir/engine/scene/Camera.cpp.s
+.PHONY : engine/scene/Camera.cpp.s
 
 engine/scene/Scene.o: engine/scene/Scene.cpp.o
 
@@ -413,6 +467,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... engine"
 	@echo "... main"
+	@echo "... Testing_Utilities.o"
+	@echo "... Testing_Utilities.i"
+	@echo "... Testing_Utilities.s"
 	@echo "... engine/Game.o"
 	@echo "... engine/Game.i"
 	@echo "... engine/Game.s"
@@ -425,6 +482,9 @@ help:
 	@echo "... engine/objects/Man/Man.o"
 	@echo "... engine/objects/Man/Man.i"
 	@echo "... engine/objects/Man/Man.s"
+	@echo "... engine/scene/Camera.o"
+	@echo "... engine/scene/Camera.i"
+	@echo "... engine/scene/Camera.s"
 	@echo "... engine/scene/Scene.o"
 	@echo "... engine/scene/Scene.i"
 	@echo "... engine/scene/Scene.s"

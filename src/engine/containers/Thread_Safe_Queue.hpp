@@ -5,6 +5,7 @@
 #define GUARD_THREAD_SAFE_QUEUE_HPP
 
 #include <memory>
+#include <atomic>
 template <typename T>
 class Thread_Safe_Queue{
 private:

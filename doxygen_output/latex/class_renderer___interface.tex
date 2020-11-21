@@ -1,0 +1,42 @@
+\hypertarget{class_renderer___interface}{}\doxysection{Renderer\+\_\+\+Interface Class Reference}
+\label{class_renderer___interface}\index{Renderer\_Interface@{Renderer\_Interface}}
+
+
+Inheritance diagram for Renderer\+\_\+\+Interface\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{class_renderer___interface__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_renderer___interface_aab39ef82124ee026cfc1aac162425c74}\label{class_renderer___interface_aab39ef82124ee026cfc1aac162425c74}} 
+{\bfseries Renderer\+\_\+\+Interface} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_camera}{Camera}} $>$ camera)
+\item 
+\mbox{\Hypertarget{class_renderer___interface_a7585b8a832dd4b9f1c3ddb2f22b5c06e}\label{class_renderer___interface_a7585b8a832dd4b9f1c3ddb2f22b5c06e}} 
+virtual void {\bfseries render} () const =0
+\item 
+\mbox{\Hypertarget{class_renderer___interface_abe37b61c785c2b25fdc33efeeb2da127}\label{class_renderer___interface_abe37b61c785c2b25fdc33efeeb2da127}} 
+void {\bfseries set\+Camera} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_camera}{Camera}} $>$)
+\item 
+\mbox{\Hypertarget{class_renderer___interface_ab460cc095f748ecc7d64bfbdb0931ed3}\label{class_renderer___interface_ab460cc095f748ecc7d64bfbdb0931ed3}} 
+bool {\bfseries is\+Camera\+Set} ()
+\item 
+\mbox{\Hypertarget{class_renderer___interface_a934f3f2e5e257356819e34cc1b59c8dc}\label{class_renderer___interface_a934f3f2e5e257356819e34cc1b59c8dc}} 
+virtual const \mbox{\hyperlink{class_sprite___interface}{Sprite\+\_\+\+Interface}} $\ast$const {\bfseries get\+Sprite} () const =0
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_renderer___interface_a747a938ada0bb6e27e5e0046b22481a5}\label{class_renderer___interface_a747a938ada0bb6e27e5e0046b22481a5}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_camera}{Camera}} $>$ {\bfseries camera} = nullptr
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/engine/graphics/Interfaces.\+hpp\item 
+src/engine/graphics/Interfaces.\+cpp\end{DoxyCompactItemize}

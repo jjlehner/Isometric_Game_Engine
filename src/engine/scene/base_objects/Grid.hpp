@@ -1,13 +1,15 @@
 #ifndef GUARD_GRID_HPP
 #define GUARD_GRID_HPP
 
-#include "graphics/Interfaces.hpp"
-
 #include <memory>
 #include <vector>
+#include "graphics/Interfaces.hpp"
 
+class Grid_Renderer;
 class Grid : public Sprite_Interface
 {
+private:
+	Grid_Renderer * renderer;
 public:
 	using Map_Vector_Type = std::vector<int>;
 	using Map_Type = std::vector<std::vector<int>>;
@@ -17,17 +19,13 @@ public:
 	const int TILE_HEIGHT_UNITS = TILE_EDGE_LENGTH/3;
 	Map_Type height_map{ HEIGHT, std::vector<int>( WIDTH, 0 ) };
 	~Grid() = default;
-	Grid( std::shared_ptr<Camera>, int width, int height );
+	Grid( Camera *camera, int width, int height );
 };
 
 class Grid_Renderer : public Renderer_Interface
 {
-private:
-	const Grid *const GRID;
-
 public:
-	virtual const Grid *const getSprite() const;
-	Grid_Renderer( std::shared_ptr<Camera> camera, const Grid *const grid );
+	Grid_Renderer( Camera* camera, const Grid *const grid );
 	virtual void render() const override;
 	virtual ~Grid_Renderer() = default;
 };

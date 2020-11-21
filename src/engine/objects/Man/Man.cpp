@@ -52,3 +52,5 @@ void Man::tick()
 Man::~Man()
 {
 }
+
+Man::get

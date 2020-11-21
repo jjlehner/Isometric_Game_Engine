@@ -47,13 +47,14 @@
 					<Add directory="/home/jjl119/Programming/Game_Programming/isometric_world/src/engine"/>
 					<Add directory="/usr/include/SDL2"/>
 					<Add directory="/home/jjl119/Programming/Game_Programming/isometric_world/src/engine/containers"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j8 -f &quot;/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 engine"/>
@@ -72,13 +73,14 @@
 					<Add directory="/home/jjl119/Programming/Game_Programming/isometric_world/src/engine"/>
 					<Add directory="/usr/include/SDL2"/>
 					<Add directory="/home/jjl119/Programming/Game_Programming/isometric_world/src/engine/containers"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j8 -f &quot;/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 engine/fast"/>
@@ -97,13 +99,14 @@
 					<Add directory="/usr/include/SDL2"/>
 					<Add directory="/home/jjl119/Programming/Game_Programming/isometric_world/src/engine"/>
 					<Add directory="/home/jjl119/Programming/Game_Programming/isometric_world/src/engine/containers"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j8 -f &quot;/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 main"/>
@@ -122,13 +125,14 @@
 					<Add directory="/usr/include/SDL2"/>
 					<Add directory="/home/jjl119/Programming/Game_Programming/isometric_world/src/engine"/>
 					<Add directory="/home/jjl119/Programming/Game_Programming/isometric_world/src/engine/containers"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j8 -f &quot;/home/jjl119/Programming/Game_Programming/isometric_world/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 main/fast"/>
@@ -138,6 +142,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/jjl119/Programming/Game_Programming/isometric_world/src/Testing_Utilities.cpp">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/home/jjl119/Programming/Game_Programming/isometric_world/src/Testing_Utilities.hpp">
+			<Option target="engine"/>
+		</Unit>
 		<Unit filename="/home/jjl119/Programming/Game_Programming/isometric_world/src/engine/Game.cpp">
 			<Option target="engine"/>
 		</Unit>
@@ -160,6 +170,12 @@
 			<Option target="engine"/>
 		</Unit>
 		<Unit filename="/home/jjl119/Programming/Game_Programming/isometric_world/src/engine/objects/Man/Man.hpp">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/home/jjl119/Programming/Game_Programming/isometric_world/src/engine/scene/Camera.cpp">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/home/jjl119/Programming/Game_Programming/isometric_world/src/engine/scene/Camera.hpp">
 			<Option target="engine"/>
 		</Unit>
 		<Unit filename="/home/jjl119/Programming/Game_Programming/isometric_world/src/engine/scene/Scene.cpp">
